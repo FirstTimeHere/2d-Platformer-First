@@ -382,7 +382,7 @@
 "Assets/Enemys/scripts/EnemyMover.cs"
 "Assets/Enemys/scripts/EnemySpawner.cs"
 "Assets/scripts/Player.cs"
-"Assets/scripts/PlayerAnimation.cs"
+"Assets/scripts/PlayerAnimator.cs"
 "Assets/scripts/PlayerMover.cs"
 "Assets/SpawnPoints/Scripts/Border.cs"
 "Assets/SpawnPoints/Scripts/SpawnPoint.cs"

@@ -5,13 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyAnimator))]
 public class EnemyMover : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    private float _speed;
 
     private Border _borderBegin, _borderEnd;
 
     private bool _isItBorderBegin;
 
-    public event Action<bool> GetJump, GetIdle, GetRun;
+    public event Action<bool> Jumped, CameBackIdle, Ran;
 
     private Vector2 _negativeScale;
     private Vector2 _defaultScale;
@@ -33,15 +33,15 @@ public class EnemyMover : MonoBehaviour
         if (_isItBorderBegin)
         {
             transform.position = Vector2.MoveTowards(transform.position, _borderEnd.transform.position, _speed * Time.deltaTime);
-            transform.localScale=_negativeScale;
+            transform.localScale = _negativeScale;
         }
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, _borderBegin.transform.position, _speed * Time.deltaTime);
-            transform.localScale=_defaultScale;
+            transform.localScale = _defaultScale;
         }
 
-        GetRun?.Invoke(true);
+        Ran?.Invoke(true);
     }
 
     public void GetBorders(Border border, Border secondBorder)
@@ -60,5 +60,10 @@ public class EnemyMover : MonoBehaviour
         {
             _isItBorderBegin = false;
         }
+    }
+
+    public void GetSpeed(float speed)
+    {
+       _speed = speed;
     }
 }

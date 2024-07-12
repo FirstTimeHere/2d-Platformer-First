@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Animator))]
-public class PlayerAnimation : MonoBehaviour
+public class PlayerAnimator : MonoBehaviour
 {
     private Animator _animator;
     private PlayerMover _playerMover;
@@ -14,16 +14,16 @@ public class PlayerAnimation : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerMover.GetJump += Jump;
-        _playerMover.GetIdle += Idle;
-        _playerMover.GetRun += Run;
+        _playerMover.Jumped += Jump;
+        _playerMover.CameBackIdle += Idle;
+        _playerMover.Ran += Run;
     }
 
     private void OnDisable()
     {
-        _playerMover.GetJump -= Jump;
-        _playerMover.GetIdle -= Idle; 
-        _playerMover.GetRun -= Run; 
+        _playerMover.Jumped -= Jump;
+        _playerMover.CameBackIdle -= Idle; 
+        _playerMover.Ran -= Run; 
     }
 
     private void Jump(bool isJumped)

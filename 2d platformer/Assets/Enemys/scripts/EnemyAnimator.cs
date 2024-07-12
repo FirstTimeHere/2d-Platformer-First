@@ -14,16 +14,16 @@ public class EnemyAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        _enemyMover.GetJump += Jump;
-        _enemyMover.GetIdle += Idle;
-        _enemyMover.GetRun += Run;
+        _enemyMover.Jumped += Jump;
+        _enemyMover.CameBackIdle += Idle;
+        _enemyMover.Ran += Run;
     }
 
     private void OnDisable()
     {
-        _enemyMover.GetJump -= Jump;
-        _enemyMover.GetIdle -= Idle;
-        _enemyMover.GetRun -= Run;
+        _enemyMover.Jumped -= Jump;
+        _enemyMover.CameBackIdle -= Idle;
+        _enemyMover.Ran -= Run;
     }
 
     private void Jump(bool isJumped)

@@ -9,7 +9,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -69,7 +70,7 @@
     <Compile Include="Assets\Enemys\scripts\EnemyAnimator.cs" />
     <Compile Include="Assets\scripts\Player.cs" />
     <Compile Include="Assets\scripts\PlayerMover.cs" />
-    <Compile Include="Assets\scripts\PlayerAnimation.cs" />
+    <Compile Include="Assets\scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\Wizard - 2D Character\Demo\WizDemo1.cs" />
     <Compile Include="Assets\Chests\scripts\Chest.cs" />
     <Compile Include="Assets\Enemys\scripts\Enemy.cs" />

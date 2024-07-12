@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
+[RequireComponent(typeof(PlayerAnimator))]
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -9,7 +10,7 @@ public class PlayerMover : MonoBehaviour
 
     [SerializeField] private Transform _childTransform;
 
-    public event Action<bool> GetJump, GetRun, GetIdle;
+    public event Action<bool> Jumped, Ran, CameBackIdle;
 
     private Rigidbody2D _rigidbody;
 
@@ -48,11 +49,11 @@ public class PlayerMover : MonoBehaviour
             _childTransform.localScale = _defaultScale;
         }
 
-        GetRun?.Invoke(true);
+        Ran?.Invoke(true);
 
         if (horizontal == 0)
         {
-            GetRun?.Invoke(false);
+            Ran?.Invoke(false);
         }
     }
 
@@ -60,16 +61,16 @@ public class PlayerMover : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
-            GetJump?.Invoke(true);
-            GetRun?.Invoke(false);
-            GetIdle?.Invoke(false);
+            Jumped?.Invoke(true);
+            Ran?.Invoke(false);
+            CameBackIdle?.Invoke(false);
 
             _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
         else
         {
-            GetJump?.Invoke(false);
-            GetIdle?.Invoke(true);
+            Jumped?.Invoke(false);
+            CameBackIdle?.Invoke(true);
         }
     }
 

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -14,5 +12,10 @@ public class Enemy : MonoBehaviour
     public void GetBorders(Border border,Border secondBorder)
     {
         _mover.GetBorders(border, secondBorder);
+    }
+
+    public void GetSpeed(float speed)
+    {
+        _mover.GetSpeed(speed);
     }
 }
