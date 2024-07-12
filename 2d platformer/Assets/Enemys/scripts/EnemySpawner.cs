@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField, Range(0f, 10f)] private float _speed;
     [SerializeField] private Enemy _enemy;
 
-    private List<Enemy> _enemies=new List<Enemy>();
+    private List<Enemy> _enemies = new List<Enemy>();
 
     private int _enemyCount = 0;
 
@@ -25,12 +25,12 @@ public class EnemySpawner : MonoBehaviour
     {
         while (_enemyCount > 0)
         {
-            Border[] borders = _spawnPoints[_enemyCount-1].GetBorders();
+            Border[] borders = _spawnPoints[_enemyCount - 1].GetBorders();
 
-            Enemy enemy = Instantiate(_enemies[_enemies.Count-1]);
+            Enemy enemy = Instantiate(_enemies[_enemies.Count - 1]);
             enemy.gameObject.SetActive(true);
             enemy.GetBorders(borders[0], borders[1]);
-            enemy.transform.position = _spawnPoints[_enemyCount-1].transform.position;
+            enemy.transform.position = _spawnPoints[_enemyCount - 1].transform.position;
 
             _enemyCount--;
         }

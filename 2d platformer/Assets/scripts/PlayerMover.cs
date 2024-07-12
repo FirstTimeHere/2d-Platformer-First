@@ -9,14 +9,14 @@ public class PlayerMover : MonoBehaviour
 
     [SerializeField] private Transform _childTransform;
 
-    public Action<bool> GetJump, GetRun, GetIdle;
+    public event Action<bool> GetJump, GetRun, GetIdle;
 
     private Rigidbody2D _rigidbody;
 
     private bool _isGrounded;
 
     private Vector2 _negativeScale;
-    private Vector3 _defaultScale;
+    private Vector2 _defaultScale;
 
     private void Awake()
     {

@@ -11,10 +11,10 @@ public class EnemyMover : MonoBehaviour
 
     private bool _isItBorderBegin;
 
-    public Action<bool> GetJump, GetIdle, GetRun;
+    public event Action<bool> GetJump, GetIdle, GetRun;
 
     private Vector2 _negativeScale;
-    private Vector3 _defaultScale;
+    private Vector2 _defaultScale;
 
     private void Awake()
     {
