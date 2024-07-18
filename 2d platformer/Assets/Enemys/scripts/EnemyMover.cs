@@ -11,10 +11,10 @@ public class EnemyMover : MonoBehaviour
 
     private bool _isItBorderBegin;
 
-    public event Action<bool> Jumped, CameBackIdle, Ran;
-
     private Vector2 _negativeScale;
     private Vector2 _defaultScale;
+
+    public event Action<bool> Jumped, CameBackIdle, Ran;
 
     private void Awake()
     {
@@ -52,11 +52,11 @@ public class EnemyMover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == _borderBegin.SetCollider())
+        if (collision == _borderBegin.GetCollider())
         {
             _isItBorderBegin = true;
         }
-        else if (collision == _borderEnd.SetCollider())
+        else if (collision == _borderEnd.GetCollider())
         {
             _isItBorderBegin = false;
         }

@@ -10,7 +10,7 @@ public class Border : MonoBehaviour
         _collider = GetComponent<BoxCollider2D>();
     }
 
-    public BoxCollider2D SetCollider()
+    public BoxCollider2D GetCollider()
     {
         return _collider;
     }

@@ -1,14 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    [SerializeField] private Border[] _borders;
+    [SerializeField] private List<Border> _borders;
 
-    public Border[] GetBorders() 
+    public List<Border> GetBorders()
     {
-        Border[] borders = _borders;
-        return borders; 
+        return _borders.ToList();
     }
 }

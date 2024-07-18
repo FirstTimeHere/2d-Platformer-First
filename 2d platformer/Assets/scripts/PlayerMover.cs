@@ -5,23 +5,34 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerAnimator))]
 public class PlayerMover : MonoBehaviour
 {
+    private const string Horizontal = nameof(Horizontal);
+
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
 
+    [SerializeField] private LayerMask _groundMask;
+
     [SerializeField] private Transform _childTransform;
 
-    public event Action<bool> Jumped, Ran, CameBackIdle;
-
     private Rigidbody2D _rigidbody;
+    private Collider2D _collider;
 
+    private Player _player;
+    
     private bool _isGrounded;
 
     private Vector2 _negativeScale;
     private Vector2 _defaultScale;
 
+    private KeyCode _jump = KeyCode.Space;
+
+    public event Action<bool> Jumped, Ran, CameBackIdle;
+
     private void Awake()
     {
+        _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _collider = _player.GetCollider();
 
         _negativeScale = _childTransform.localScale;
         _defaultScale = _childTransform.localScale;
@@ -36,7 +47,7 @@ public class PlayerMover : MonoBehaviour
 
     private void Move()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxis(Horizontal);
 
         transform.Translate(new Vector2(horizontal, 0) * _speed * Time.deltaTime);
 
@@ -59,7 +70,9 @@ public class PlayerMover : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+        _isGrounded = CheckGround();
+
+        if (Input.GetKeyDown(_jump) && _isGrounded)
         {
             Jumped?.Invoke(true);
             Ran?.Invoke(false);
@@ -74,13 +87,11 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private bool CheckGround()
     {
-        _isGrounded = false;
-    }
+        Vector2 point = new Vector2(_collider.bounds.center.x, _collider.bounds.min.y);
+        Vector2 size = new Vector2(_collider.bounds.size.x * 0.55f, 0.01f);
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        _isGrounded = true;
+        return Physics2D.OverlapBox(point, size, 0, _groundMask);
     }
 }

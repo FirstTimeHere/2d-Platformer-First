@@ -883,6 +883,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00854025feaa5b94c905b30db2aed840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _items:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &1580674445
 Rigidbody2D:
   serializedVersion: 4
@@ -959,6 +962,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _jumpForce: 5
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 8
   _childTransform: {fileID: 1675020427}
 --- !u!114 &1580674451
 MonoBehaviour:
@@ -1033,7 +1039,7 @@ GameObject:
   - component: {fileID: 1634994802}
   - component: {fileID: 1634994804}
   - component: {fileID: 1634994803}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

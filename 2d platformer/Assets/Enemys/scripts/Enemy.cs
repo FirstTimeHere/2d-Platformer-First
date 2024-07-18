@@ -9,12 +9,12 @@ public class Enemy : MonoBehaviour
         _mover = GetComponent<EnemyMover>();
     }
 
-    public void GetBorders(Border border,Border secondBorder)
+    public void SetBorders(Border border, Border secondBorder)
     {
         _mover.GetBorders(border, secondBorder);
     }
 
-    public void GetSpeed(float speed)
+    public void SetSpeed(float speed)
     {
         _mover.GetSpeed(speed);
     }

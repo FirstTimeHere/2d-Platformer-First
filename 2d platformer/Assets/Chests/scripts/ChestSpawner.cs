@@ -24,8 +24,6 @@ public class ChestSpawner : MonoBehaviour
             Chest chest = Instantiate(_chestsType[randomChest]);
             chest.transform.position = tempPoints[randomPoint].transform.position;
 
-            chest.GetPlayer(_player);
-
             tempPoints.RemoveAt(randomPoint);
         }
     }
