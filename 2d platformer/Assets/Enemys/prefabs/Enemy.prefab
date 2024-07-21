@@ -136,7 +136,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &1257402547798245102
 CapsuleCollider2D:
@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86272d1668b2ca4983d14826afbf432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 1
 --- !u!114 &5998538855678766543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9d882d5a39d8c4393ccd19c99d0908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
 --- !u!114 &6069984019853613943
 MonoBehaviour:
   m_ObjectHideFlags: 0

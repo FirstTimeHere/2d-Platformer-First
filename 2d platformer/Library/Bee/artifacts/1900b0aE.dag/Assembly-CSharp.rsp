@@ -384,10 +384,15 @@
 "Assets/scripts/Player.cs"
 "Assets/scripts/PlayerAnimator.cs"
 "Assets/scripts/PlayerMover.cs"
+"Assets/scripts/PlayerSpawnPoint.cs"
 "Assets/SpawnPoints/Scripts/Border.cs"
 "Assets/SpawnPoints/Scripts/SpawnPoint.cs"
+"Assets/Walls/Scripts/InvisibleWall.cs"
 "Assets/Wizard - 2D Character/Demo/SimplePlayerController.cs"
 "Assets/Wizard - 2D Character/Demo/WizDemo1.cs"
+"Assets/Wizard - 2D Character/Weapon/Scripts/FireBall.cs"
+"Assets/Wizard - 2D Character/Weapon/Scripts/FireBallMover.cs"
+"Assets/Wizard - 2D Character/Weapon/Scripts/SpawPoitnFireBall.cs"
 -langversion:9.0
 /deterministic
 /optimize+

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -8,11 +9,22 @@ public class Player : MonoBehaviour
 
     private Collider2D _playerCollider;
 
+    private PlayerMover _playerMover;
+
     private KeyCode _interaction = KeyCode.E;
+    private KeyCode _attack = KeyCode.Mouse0;
+
+    public event Action Atacked;
 
     private void Awake()
     {
         _playerCollider = GetComponent<Collider2D>();
+        _playerMover = GetComponent<PlayerMover>();
+    }
+
+    private void Update()
+    {
+        Attack();
     }
 
     public Collider2D GetCollider()
@@ -36,6 +48,19 @@ public class Player : MonoBehaviour
             {
                 collision.gameObject.SetActive(false);
             }
+        }
+    }
+
+    public Vector2 GetChildLocalScale()
+    {
+        return _playerMover.GetChildLocalScale();
+    }
+
+    private void Attack()
+    {
+        if (Input.GetKeyDown(_attack))
+        {
+            Atacked?.Invoke();
         }
     }
 }

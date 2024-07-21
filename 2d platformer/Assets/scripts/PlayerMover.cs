@@ -94,4 +94,9 @@ public class PlayerMover : MonoBehaviour
 
         return Physics2D.OverlapBox(point, size, 0, _groundMask);
     }
+
+    public Vector2 GetChildLocalScale()
+    {
+        return _childTransform.localScale;
+    }
 }
