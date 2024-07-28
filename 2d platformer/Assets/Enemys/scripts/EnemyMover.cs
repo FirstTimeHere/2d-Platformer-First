@@ -1,26 +1,34 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
 [RequireComponent(typeof(EnemyAnimator))]
 public class EnemyMover : MonoBehaviour
 {
+    [SerializeField] private LayerMask _targetMask;
+
     private Border _borderBegin, _borderEnd;
 
     private bool _isItBorderBegin;
 
     private float _speed;
+    private float _distance;
 
-    private Vector2 _negativeScale;
-    private Vector2 _defaultScale;
+    private Quaternion _negativeScale;
+    private Quaternion _defaultScale;
 
-    public event Action<bool> Jumped, CameBackIdle, Ran;
+    public event Action<bool> Ran;
 
     private void Awake()
     {
-        _negativeScale = transform.localScale;
-        _defaultScale = transform.localScale;
-        _negativeScale.x *= -1;
+        _negativeScale = Quaternion.Euler(0, 180f, 0);
+        _defaultScale = Quaternion.identity;
+    }
+
+    private void Start()
+    {
+        _distance = _borderEnd.transform.position.x - _borderBegin.transform.position.x;
     }
 
     private void Update()
@@ -30,45 +38,40 @@ public class EnemyMover : MonoBehaviour
 
     private void Move()
     {
-        if (SeePlayer(out Transform target))
-        {
+        if (TryDectedPlayer())
+        { 
+            Transform target = TryDectedPlayer();
+
             transform.position = Vector2.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);
+        }
+
+        if (_isItBorderBegin)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, _borderEnd.transform.position, _speed * Time.deltaTime);
+            transform.rotation = _negativeScale;
         }
         else
         {
-            if (_isItBorderBegin)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, _borderEnd.transform.position, _speed * Time.deltaTime);
-                transform.localScale = _negativeScale;
-            }
-            else
-            {
-                transform.position = Vector2.MoveTowards(transform.position, _borderBegin.transform.position, _speed * Time.deltaTime);
-                transform.localScale = _defaultScale;
-            }
+            transform.position = Vector2.MoveTowards(transform.position, _borderBegin.transform.position, _speed * Time.deltaTime);
+            transform.rotation = _defaultScale;
         }
 
         Ran?.Invoke(true);
     }
 
-    private bool SeePlayer(out Transform target)
+    private Transform TryDectedPlayer()
     {
-        Vector3 direction = _borderBegin.transform.position - _borderEnd.transform.position;
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction);
+        RaycastHit2D hit2D = Physics2D.Raycast(transform.position, -transform.right, _distance, _targetMask);
 
-        foreach (RaycastHit2D hit2D in hits)
+        if (hit2D)
         {
-            if (hit2D.rigidbody.gameObject.GetComponent<Player>())
+            if (hit2D.collider.GetComponent<Player>())
             {
-                target = hit2D.collider.gameObject.transform;
-                Debug.Log(target);
-                return true;
+                return hit2D.collider.transform;
             }
         }
 
-        target = null;
-
-        return false;
+        return null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

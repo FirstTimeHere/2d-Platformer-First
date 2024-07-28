@@ -20,6 +20,7 @@ public class PlayerAnimator : MonoBehaviour
         _player.Atacked += Atacked;
         _playerMover.Jumped += Jump;
         _playerMover.CameBackIdle += Idle;
+        _player.Hurted += Hurted;
 
     }
 
@@ -28,6 +29,7 @@ public class PlayerAnimator : MonoBehaviour
         _playerMover.Ran -= Run; 
         _player.Atacked -= Atacked;
         _playerMover.Jumped -= Jump;
+        _player.Hurted -= Hurted;
         _playerMover.CameBackIdle -= Idle; 
     }
 
@@ -51,11 +53,17 @@ public class PlayerAnimator : MonoBehaviour
         _animator.SetTrigger(Params.Atacked);
     }
 
+    private void Hurted()
+    {
+        _animator.SetTrigger(Params.TakeDamage);
+    }
+
     public static class Params
     {
         public static readonly int IsJumped = Animator.StringToHash(nameof(IsJumped));
         public static readonly int IsIdle = Animator.StringToHash(nameof(IsIdle));
         public static readonly int IsRun = Animator.StringToHash(nameof(IsRun));
         public static readonly int Atacked = Animator.StringToHash(nameof(Atacked));
+        public static readonly int TakeDamage = Animator.StringToHash(nameof(TakeDamage));
     }
 }

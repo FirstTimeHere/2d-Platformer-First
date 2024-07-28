@@ -14,7 +14,9 @@ public class Player : MonoBehaviour
     private KeyCode _interaction = KeyCode.E;
     private KeyCode _attack = KeyCode.Mouse0;
 
-    public event Action Atacked;
+    public float Health { get; private set; } = 10000f;
+
+    public event Action Atacked, Hurted;
 
     private void Awake()
     {
@@ -54,6 +56,12 @@ public class Player : MonoBehaviour
     public Vector2 GetChildLocalScale()
     {
         return _playerMover.GetChildLocalScale();
+    }
+
+    public void TakeDamage(Enemy enemy)
+    {
+        Health -= enemy.Damage;
+        Hurted?.Invoke();
     }
 
     private void Attack()

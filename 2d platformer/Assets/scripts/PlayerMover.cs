@@ -18,9 +18,9 @@ public class PlayerMover : MonoBehaviour
     private Collider2D _collider;
 
     private Player _player;
-    
-    private bool _isGrounded;
 
+    private bool _isGrounded;
+    
     private Vector2 _negativeScale;
     private Vector2 _defaultScale;
 
@@ -51,11 +51,11 @@ public class PlayerMover : MonoBehaviour
 
         transform.Translate(new Vector2(horizontal, 0) * _speed * Time.deltaTime);
 
-        if (horizontal < 0)
+        if (horizontal < 0 )
         {
             _childTransform.localScale = _negativeScale;
         }
-        else
+        else if(horizontal > 0)
         {
             _childTransform.localScale = _defaultScale;
         }

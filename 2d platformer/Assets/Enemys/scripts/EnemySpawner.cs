@@ -40,6 +40,8 @@ public class EnemySpawner : MonoBehaviour
             enemy.SetBorders(borders[0], borders[1]);
             enemy.SetSpeed(_speed);
             enemy.SetHealth(GetRandomHealth());
+            enemy.SetDamage(GetRandomDamage());
+
         }
     }
 
@@ -47,6 +49,16 @@ public class EnemySpawner : MonoBehaviour
     {
         int minRandomValue = 0;
         int maxRandomValue = 1001;
+
+        float randomValue = Random.Range(minRandomValue, maxRandomValue);
+
+        return randomValue;
+    }
+
+    private float GetRandomDamage()
+    {
+        int minRandomValue = 0;
+        int maxRandomValue = 101;
 
         float randomValue = Random.Range(minRandomValue, maxRandomValue);
 
