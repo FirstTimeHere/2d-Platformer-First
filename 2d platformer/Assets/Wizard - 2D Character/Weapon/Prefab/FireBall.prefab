@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7459166797735874886}
   - component: {fileID: 7952019329532029235}
   - component: {fileID: 1209619526165654407}
+  - component: {fileID: 137948948446649410}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -100,15 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3aab5cc51fecd6409d019b60090fb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireBallAnimation:
-  - {fileID: 965163466, guid: 731333545fc83064888e56c7792798b3, type: 3}
-  - {fileID: 1635931512, guid: 731333545fc83064888e56c7792798b3, type: 3}
-  - {fileID: -386817460, guid: 731333545fc83064888e56c7792798b3, type: 3}
-  - {fileID: 2027185182, guid: 731333545fc83064888e56c7792798b3, type: 3}
-  - {fileID: -1814802335, guid: 731333545fc83064888e56c7792798b3, type: 3}
-  - {fileID: 1081641827, guid: 731333545fc83064888e56c7792798b3, type: 3}
-  _animationTime: 0.1
-  _damage: 30
 --- !u!50 &7459166797735874886
 Rigidbody2D:
   serializedVersion: 4
@@ -184,3 +176,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 20
+--- !u!114 &137948948446649410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057144553014131162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b80c628c514f6547945bb161160d1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireBallAnimation:
+  - {fileID: 965163466, guid: 731333545fc83064888e56c7792798b3, type: 3}
+  - {fileID: 1635931512, guid: 731333545fc83064888e56c7792798b3, type: 3}
+  - {fileID: -386817460, guid: 731333545fc83064888e56c7792798b3, type: 3}
+  - {fileID: 2027185182, guid: 731333545fc83064888e56c7792798b3, type: 3}
+  - {fileID: -1814802335, guid: 731333545fc83064888e56c7792798b3, type: 3}
+  - {fileID: 1081641827, guid: 731333545fc83064888e56c7792798b3, type: 3}
+  _animationTime: 0.25

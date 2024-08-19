@@ -6,6 +6,9 @@ public class ChestSpawner : MonoBehaviour
     [SerializeField] private List<SpawnPointChest> _spawnPoints;
     [SerializeField] private Chest[] _chestsType;
     [SerializeField] private Player _player;
+    [SerializeField] private Item[] _items;
+
+    private int _maxItemsInChest = 10;
 
     private void Spawn()
     {
@@ -23,6 +26,12 @@ public class ChestSpawner : MonoBehaviour
 
             Chest chest = Instantiate(_chestsType[randomChest]);
             chest.transform.position = tempPoints[randomPoint].transform.position;
+
+            for (int j = 0; j < _maxItemsInChest; j++)
+            {
+                Item item = Instantiate(_items[Random.Range(0,_items.Length)],chest.transform);
+                item.gameObject.SetActive(false);
+            }
 
             tempPoints.RemoveAt(randomPoint);
         }

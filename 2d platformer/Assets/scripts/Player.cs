@@ -10,9 +10,13 @@ public class Player : MonoBehaviour
     private Collider2D _playerCollider;
 
     private PlayerMover _playerMover;
+    private Player _player;
 
     private KeyCode _interaction = KeyCode.E;
     private KeyCode _attack = KeyCode.Mouse0;
+
+    private float _maxHealth;
+    private float _money = 0;
 
     public float Health { get; private set; } = 10000f;
 
@@ -22,6 +26,8 @@ public class Player : MonoBehaviour
     {
         _playerCollider = GetComponent<Collider2D>();
         _playerMover = GetComponent<PlayerMover>();
+        _maxHealth = Health;
+        _player = GetComponent<Player>();
     }
 
     private void Update()
@@ -46,10 +52,23 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Chest>())
         {
+            Chest chest = collision.gameObject.GetComponent<Chest>();
+
             if (Input.GetKey(_interaction) && CheckInterection())
             {
-                collision.gameObject.SetActive(false);
+                chest.GetOpen();
+                chest.DisableCollider(chest);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Item>())
+        {
+            Item item = collision.gameObject.GetComponent<Item>();
+            item.GetAbility(_player);
+            Destroy(item.gameObject);
         }
     }
 
@@ -70,5 +89,18 @@ public class Player : MonoBehaviour
         {
             Atacked?.Invoke();
         }
+    }
+
+    public void TakeHeal(float heal)
+    {
+        Health += heal;
+
+        if (Health > _maxHealth)
+            Health = _maxHealth;
+    }
+
+    public void TakeMoney(float money)
+    {
+        _money += money;
     }
 }
