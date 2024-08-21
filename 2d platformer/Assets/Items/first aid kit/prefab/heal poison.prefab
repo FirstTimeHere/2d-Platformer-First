@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5949103774109477334}
   - component: {fileID: 3660593685008390269}
   - component: {fileID: 8382490299229812563}
-  - component: {fileID: 8355704506126961129}
+  - component: {fileID: 9008115919753332866}
+  - component: {fileID: 6069890337527250237}
   m_Layer: 0
   m_Name: heal poison
   m_TagString: Untagged
@@ -121,7 +122,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.039586723}
   m_Size: {x: 1.89, y: 2.8719568}
   m_Direction: 0
---- !u!114 &8355704506126961129
+--- !u!114 &9008115919753332866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675344126342549731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9047ce2ba9be649459c2443dd40a286a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0.5
+  _timerActive: 3
+--- !u!114 &6069890337527250237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

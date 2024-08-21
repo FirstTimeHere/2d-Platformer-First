@@ -13,6 +13,7 @@ public class ChestSpawner : MonoBehaviour
     private void Spawn()
     {
         List<SpawnPointChest> tempPoints = new List<SpawnPointChest>();
+        List<Item> tempItems = new List<Item>();
 
         foreach (SpawnPointChest spawnPoint in _spawnPoints)
         {
@@ -29,9 +30,14 @@ public class ChestSpawner : MonoBehaviour
 
             for (int j = 0; j < _maxItemsInChest; j++)
             {
-                Item item = Instantiate(_items[Random.Range(0,_items.Length)],chest.transform);
+                int randomItem = Random.Range(0, _items.Length);
+                Item item = Instantiate(_items[randomItem], chest.transform); 
                 item.gameObject.SetActive(false);
+                tempItems.Add(item);
             }
+
+            chest.GetItemsFromSpawnner(tempItems);
+            tempItems.Clear();
 
             tempPoints.RemoveAt(randomPoint);
         }
