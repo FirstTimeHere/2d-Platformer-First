@@ -1,12 +1,11 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
 public class Enemy : MonoBehaviour
 {
     private EnemyMover _mover;
+    private Enemy _enemy;
 
     private float _health;
     private float _delay = 1f;
@@ -14,8 +13,6 @@ public class Enemy : MonoBehaviour
     private bool _isTimeOut;
 
     private Coroutine _coroutine;
-
-    private Enemy _enemy;
 
     public float Damage { get; private set; }
 
@@ -62,9 +59,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player player = collision.GetComponent<Player>();
-
-        if (player)
+        if (collision.TryGetComponent(out Player player))
         {
             if (_coroutine == null)
             {
@@ -78,7 +73,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<Player>())
+        if (collision.TryGetComponent(out Player player))
         {
             _isTimeOut = false;
 

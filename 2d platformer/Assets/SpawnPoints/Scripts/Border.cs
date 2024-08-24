@@ -3,15 +3,10 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Border : MonoBehaviour
 {
-    private BoxCollider2D _collider;
+    public BoxCollider2D ColliderBorder { get; private set; }
 
     private void Awake()
     {
-        _collider = GetComponent<BoxCollider2D>();
-    }
-
-    public BoxCollider2D GetCollider()
-    {
-        return _collider;
+        ColliderBorder = GetComponent<BoxCollider2D>();
     }
 }

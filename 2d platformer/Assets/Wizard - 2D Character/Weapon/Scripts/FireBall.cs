@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -11,10 +9,9 @@ public class FireBall : MonoBehaviour
 {
     private float _fireBallLifeTimer = 2f;
    
-    public float Damage { get; private set; } = 30f;
-
     private FireBallMover _mover;
 
+    public float Damage { get; private set; } = 30f;
 
     private void Awake()
     {
@@ -53,9 +50,9 @@ public class FireBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Enemy>())
+        if (collision.gameObject.TryGetComponent(out Enemy enemy))
         {
-            collision.gameObject.GetComponent<Enemy>().TakeDamageFireBall(gameObject.GetComponent<FireBall>());
+            enemy.TakeDamageFireBall(gameObject.GetComponent<FireBall>());
             Destroy(gameObject);
         }
     }

@@ -26,13 +26,15 @@ public class PlayerMover : MonoBehaviour
 
     private KeyCode _jump = KeyCode.Space;
 
-    public event Action<bool> Jumped, Ran, CameBackIdle;
+    public event Action<bool> Jumped;
+    public event Action<bool> Ran;
+    public event Action<bool> CameBackIdle;
 
     private void Awake()
     {
         _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        _collider = _player.GetCollider();
+        _collider = _player.PlayerCollider;
 
         _negativeScale = _childTransform.localScale;
         _defaultScale = _childTransform.localScale;

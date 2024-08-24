@@ -7,8 +7,6 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask _items;
 
-    private Collider2D _playerCollider;
-
     private PlayerMover _playerMover;
     private Player _player;
 
@@ -20,11 +18,14 @@ public class Player : MonoBehaviour
 
     public float Health { get; private set; } = 10000f;
 
-    public event Action Atacked, Hurted;
+    public Collider2D PlayerCollider { get; private set; }
+
+    public event Action Atacked;
+    public event Action Hurted;
 
     private void Awake()
     {
-        _playerCollider = GetComponent<Collider2D>();
+        PlayerCollider = GetComponent<Collider2D>();
         _playerMover = GetComponent<PlayerMover>();
         _maxHealth = Health;
         _player = GetComponent<Player>();
@@ -35,38 +36,38 @@ public class Player : MonoBehaviour
         Attack();
     }
 
-    public Collider2D GetCollider()
+    private void Attack()
     {
-        return _playerCollider;
+        if (Input.GetKeyDown(_attack))
+        {
+            Atacked?.Invoke();
+        }
     }
 
     private bool CheckInterection()
     {
-        Vector2 point = new Vector2(_playerCollider.bounds.center.x, _playerCollider.bounds.min.y);
-        Vector2 size = new Vector2(_playerCollider.bounds.size.x * 0.55f, 0.01f);
+        Vector2 point = new Vector2(PlayerCollider.bounds.center.x, PlayerCollider.bounds.min.y);
+        Vector2 size = new Vector2(PlayerCollider.bounds.size.x * 0.55f, 0.01f);
 
         return Physics2D.OverlapBox(point, size, 0, _items);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Chest>())
+        if (collision.gameObject.TryGetComponent(out Chest chest))
         {
-            Chest chest = collision.gameObject.GetComponent<Chest>();
-
             if (Input.GetKey(_interaction) && CheckInterection())
             {
                 chest.GetOpen();
-                chest.DisableCollider(chest);
+                chest.DisableCollider();
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Item>())
+        if (collision.gameObject.TryGetComponent(out Item item))
         {
-            Item item = collision.gameObject.GetComponent<Item>();
             item.GetAbility(_player);
             Destroy(item.gameObject);
         }
@@ -81,14 +82,6 @@ public class Player : MonoBehaviour
     {
         Health -= enemy.Damage;
         Hurted?.Invoke();
-    }
-
-    private void Attack()
-    {
-        if (Input.GetKeyDown(_attack))
-        {
-            Atacked?.Invoke();
-        }
     }
 
     public void TakeHeal(float heal)

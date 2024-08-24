@@ -1,10 +1,9 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class EnemyAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+
     private EnemyMover _enemyMover;
     private Enemy _enemy;
 

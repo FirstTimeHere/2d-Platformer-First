@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -21,9 +19,9 @@ public class InvisibleWall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Player>())
+        if (collision.TryGetComponent(out Player player))
         {
-            collision.GetComponent<Player>().gameObject.transform.position = _playerSpawnPoint.transform.position;
+            collision.transform.position = _playerSpawnPoint.transform.position;
         }
     }
 }

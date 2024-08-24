@@ -1,5 +1,4 @@
 using System;
-using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
@@ -76,11 +75,11 @@ public class EnemyMover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == _borderBegin.GetCollider())
+        if (collision == _borderBegin.ColliderBorder)
         {
             _isItBorderBegin = true;
         }
-        else if (collision == _borderEnd.GetCollider())
+        else if (collision == _borderEnd.ColliderBorder)
         {
             _isItBorderBegin = false;
         }

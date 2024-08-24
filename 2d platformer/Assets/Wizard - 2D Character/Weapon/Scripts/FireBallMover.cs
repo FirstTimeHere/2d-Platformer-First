@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(FireBall))]
@@ -25,11 +23,6 @@ public class FireBallMover : MonoBehaviour
         Move();
     }
 
-    public void GetPlayerLocalScale(Vector2 playerLocalScale)
-    {
-        _playerTransform = playerLocalScale;
-    }
-
     private void Move()
     {
         if (_playerTransform.x < 0)
@@ -42,5 +35,10 @@ public class FireBallMover : MonoBehaviour
             transform.Translate(_direction * Time.deltaTime * _speed);
             transform.localScale = _localScale;
         }
+    }
+
+    public void GetPlayerLocalScale(Vector2 playerLocalScale)
+    {
+        _playerTransform = playerLocalScale;
     }
 }

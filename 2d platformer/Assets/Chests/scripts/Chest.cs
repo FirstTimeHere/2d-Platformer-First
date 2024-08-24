@@ -18,31 +18,30 @@ public class Chest : MonoBehaviour
         _chestCollider.isTrigger = true;
     }
 
+    private void EnableAllItems()
+    {
+        foreach (Item item in _items)
+        {
+            item.gameObject.SetActive(true);
+        }
+    }
+
     public void GetOpen()
     {
         Opened?.Invoke();
         EnableAllItems();
     }
 
-    public void DisableCollider(Chest chest)
+    public void DisableCollider()
     {
-        BoxCollider2D collider = chest.GetComponent<BoxCollider2D>();
-        collider.enabled = false;
+        _chestCollider.enabled = false;
     }
 
-    public void GetItemsFromSpawnner(List<Item> items)
+    public void SetItems(List<Item> items)
     {
         foreach (Item item in items)
         {
             _items.Add(item);
-        }
-    }
-
-    private void EnableAllItems()
-    {
-        foreach (Item item in _items)
-        {
-            item.gameObject.SetActive(true);
         }
     }
 }
