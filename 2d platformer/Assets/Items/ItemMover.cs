@@ -22,16 +22,19 @@ public class ItemMover : MonoBehaviour
         _direction = _directionJump[Random.Range(0, _directionJump.Count)];
     }
 
+    private void FixedUpdate()
+    {
+        if (transform.localPosition == (Vector3)_direction)
+        {
+            _collider.enabled = true;
+        }
+    }
+
     private void Update()
     {
         if (gameObject.activeSelf)
         {
             transform.localPosition = Vector2.MoveTowards(transform.localPosition, _direction, Time.deltaTime * _speed);
-
-            if (transform.localPosition == (Vector3)_direction)
-            {
-                _collider.enabled = true;
-            }
         }
     }
 
