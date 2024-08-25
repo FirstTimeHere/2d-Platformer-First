@@ -6,8 +6,5 @@ public class Coin : Item
 {
     [SerializeField] private int _coinValue;
 
-    public override void GetAbility(Player player)
-    {
-        player.TakeMoney(_coinValue);
-    }
+    public override float Value => _coinValue;
 }

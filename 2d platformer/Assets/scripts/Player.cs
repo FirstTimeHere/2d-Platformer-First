@@ -3,20 +3,18 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Health))]
+[RequireComponent(typeof(Wallet))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask _items;
 
     private PlayerMover _playerMover;
-    private Player _player;
+    private Health _health;
+    private Wallet _wallet;
 
     private KeyCode _interaction = KeyCode.E;
     private KeyCode _attack = KeyCode.Mouse0;
-
-    private float _maxHealth;
-    private float _money = 0;
-
-    public float Health { get; private set; } = 10000f;
 
     public Collider2D PlayerCollider { get; private set; }
 
@@ -27,12 +25,18 @@ public class Player : MonoBehaviour
     {
         PlayerCollider = GetComponent<Collider2D>();
         _playerMover = GetComponent<PlayerMover>();
-        _maxHealth = Health;
-        _player = GetComponent<Player>();
+        _health = GetComponent<Health>();
+        _wallet = GetComponent<Wallet>();
     }
 
     private void Update()
     {
+        if (_health.IsDied())
+        {
+            gameObject.SetActive(false);
+            Debug.Log("Умер");
+        }
+
         Attack();
     }
 
@@ -68,7 +72,12 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Item item))
         {
-            item.GetAbility(_player);
+            if (item.TryGetComponent(out Coin coin))
+            {
+                _wallet.TakeMoney(coin);
+            }
+
+            _health.TakeHeal(item);
             Destroy(item.gameObject);
         }
     }
@@ -80,20 +89,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(Enemy enemy)
     {
-        Health -= enemy.Damage;
         Hurted?.Invoke();
-    }
-
-    public void TakeHeal(float heal)
-    {
-        Health += heal;
-
-        if (Health > _maxHealth)
-            Health = _maxHealth;
-    }
-
-    public void TakeMoney(float money)
-    {
-        _money += money;
+        _health.TakeDamage(enemy.Damage);
     }
 }

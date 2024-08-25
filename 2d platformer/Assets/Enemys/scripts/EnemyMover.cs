@@ -30,9 +30,9 @@ public class EnemyMover : MonoBehaviour
         _distance = _borderEnd.transform.position.x - _borderBegin.transform.position.x;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Move();
+        Move(); 
     }
 
     private void Move()

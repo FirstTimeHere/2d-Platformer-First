@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public class Enemy : MonoBehaviour
 {
     private EnemyMover _mover;
     private Enemy _enemy;
+    private Health _health;
 
-    private float _health;
     private float _delay = 1f;
 
     private bool _isTimeOut;
@@ -22,11 +23,12 @@ public class Enemy : MonoBehaviour
     {
         _mover = GetComponent<EnemyMover>();
         _enemy = GetComponent<Enemy>();
+        _health = GetComponent<Health>();
     }
 
     private void Update()
     {
-        if (_health <= 0)
+        if (_health.IsDied())
         {
             Destroy(gameObject);
         }
@@ -39,12 +41,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamageFireBall(FireBall fireBall)
     {
-        _health -= fireBall.Damage;
-    }
-
-    public void SetHealth(float health)
-    {
-        _health = health;
+        _health.TakeDamage(fireBall.Damage);
     }
 
     public void SetDamage(float damage)

@@ -76,12 +76,14 @@
     <Compile Include="Assets\Chests\scripts\ChestAnimator.cs" />
     <Compile Include="Assets\Items\coins\scripts\Coin.cs" />
     <Compile Include="Assets\scripts\PlayerSpawnPoint.cs" />
+    <Compile Include="Assets\scripts\Wallet.cs" />
     <Compile Include="Assets\scripts\Player.cs" />
     <Compile Include="Assets\scripts\PlayerMover.cs" />
     <Compile Include="Assets\Items\coins\scripts\CoinAnimator.cs" />
     <Compile Include="Assets\Wizard - 2D Character\Demo\WizDemo1.cs" />
     <Compile Include="Assets\Chests\scripts\Chest.cs" />
     <Compile Include="Assets\Items\ItemMover.cs" />
+    <Compile Include="Assets\scripts\Health.cs" />
     <Compile Include="Assets\Wizard - 2D Character\Weapon\Scripts\FireBallMover.cs" />
     <Compile Include="Assets\Enemys\scripts\Enemy.cs" />
     <Compile Include="Assets\Items\Item.cs" />

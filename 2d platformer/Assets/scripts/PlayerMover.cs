@@ -47,6 +47,11 @@ public class PlayerMover : MonoBehaviour
         Jump();
     }
 
+    private void FixedUpdate()
+    {
+        _isGrounded = CheckGround();
+    }
+
     private void Move()
     {
         float horizontal = Input.GetAxis(Horizontal);
@@ -72,8 +77,6 @@ public class PlayerMover : MonoBehaviour
 
     private void Jump()
     {
-        _isGrounded = CheckGround();
-
         if (Input.GetKeyDown(_jump) && _isGrounded)
         {
             Jumped?.Invoke(true);
