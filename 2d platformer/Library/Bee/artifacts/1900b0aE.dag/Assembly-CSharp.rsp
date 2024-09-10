@@ -392,7 +392,6 @@
 "Assets/scripts/PlayerAnimator.cs"
 "Assets/scripts/PlayerMover.cs"
 "Assets/scripts/PlayerSpawnPoint.cs"
-"Assets/scripts/SliderHealthBarSmoothy.cs"
 "Assets/scripts/Wallet.cs"
 "Assets/SpawnPoints/Scripts/Border.cs"
 "Assets/SpawnPoints/Scripts/SpawnPoint.cs"
