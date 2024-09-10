@@ -6,12 +6,14 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private LayerMask _targetMask;
+    [SerializeField] private Transform _spriteHealthBar;
 
     private Border _borderBegin, _borderEnd;
 
     private bool _isItBorderBegin;
 
     private float _speed;
+    private float _speedForPlayer;
     private float _distance;
 
     private Quaternion _negativeScale;
@@ -32,26 +34,28 @@ public class EnemyMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move(); 
+        Move();
     }
 
     private void Move()
     {
         if (TryDectedPlayer())
-        { 
+        {
             Transform target = TryDectedPlayer();
 
-            transform.position = Vector2.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, _speedForPlayer * Time.deltaTime);
         }
 
         if (_isItBorderBegin)
         {
             transform.position = Vector2.MoveTowards(transform.position, _borderEnd.transform.position, _speed * Time.deltaTime);
+            _spriteHealthBar.localRotation = _negativeScale;
             transform.rotation = _negativeScale;
         }
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, _borderBegin.transform.position, _speed * Time.deltaTime);
+            _spriteHealthBar.localRotation = _defaultScale;
             transform.rotation = _defaultScale;
         }
 
@@ -85,9 +89,10 @@ public class EnemyMover : MonoBehaviour
         }
     }
 
-    public void GetSpeed(float speed)
+    public void GetSpeed(float speed, float speedForPlayer)
     {
         _speed = speed;
+        _speedForPlayer = speedForPlayer;
     }
 
     public void GetBorders(Border border, Border secondBorder)

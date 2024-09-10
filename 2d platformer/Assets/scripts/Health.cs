@@ -1,35 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float _MaxHealth;
+    [SerializeField] private float _maxHealthPoint;
 
-    private float _health;
+    public float HealthPoint { get; private set; }
+    public float MaxHealthPoint { get; private set; }
 
     private void Awake()
     {
-        _health = _MaxHealth;
+        HealthPoint = _maxHealthPoint;
+        MaxHealthPoint = _maxHealthPoint;
     }
-    public void TakeHeal(Item item)
+    public void TakeHeal(float heal)
     {
-        _MaxHealth += item.Value;
+        HealthPoint += heal;
 
-        if (_MaxHealth > _health)
+        if (HealthPoint > _maxHealthPoint)
         {
-            _MaxHealth = _health;
+            HealthPoint = _maxHealthPoint;
         }
     }
 
     public void TakeDamage(float damage)
     {
-        _MaxHealth -= damage;
+        HealthPoint -= damage;
     }
 
     public bool IsDied()
     {
-        if (_MaxHealth <= 0)
+        if (HealthPoint <= 0)
         {
             return true;
         }

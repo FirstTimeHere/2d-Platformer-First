@@ -49,9 +49,9 @@ public class Enemy : MonoBehaviour
         Damage = damage;
     }
 
-    public void SetSpeed(float speed)
+    public void SetSpeed(float speed, float speedForPlayer)
     {
-        _mover.GetSpeed(speed);
+        _mover.GetSpeed(speed, speedForPlayer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

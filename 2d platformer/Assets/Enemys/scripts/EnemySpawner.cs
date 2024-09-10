@@ -7,7 +7,8 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Enemy _enemy;
 
-    [SerializeField, Range(0f, 5f)] private float _speed;
+    [SerializeField, Range(0f, 2f)] private float _speed;
+    [SerializeField, Range(2f, 7f)] private float _speedForPlayer;
 
     private List<Enemy> _enemies = new List<Enemy>();
 
@@ -38,9 +39,8 @@ public class EnemySpawner : MonoBehaviour
             enemy.transform.position = _spawnPoints[i - 1].transform.position;
 
             enemy.SetBorders(borders[0], borders[1]);
-            enemy.SetSpeed(_speed);
+            enemy.SetSpeed(_speed, _speedForPlayer);
             enemy.SetDamage(GetRandomDamage());
-
         }
     }
 

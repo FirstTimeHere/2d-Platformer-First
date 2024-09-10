@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
                 _wallet.TakeMoney(coin);
             }
 
-            _health.TakeHeal(item);
+            _health.TakeHeal(item.Value);
             Destroy(item.gameObject);
         }
     }
