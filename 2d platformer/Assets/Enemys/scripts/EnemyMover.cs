@@ -7,6 +7,8 @@ public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private LayerMask _targetMask;
 
+    [SerializeField] private Transform _healthBar;
+
     private Border _borderBegin, _borderEnd;
 
     private bool _isItBorderBegin;
@@ -48,11 +50,13 @@ public class EnemyMover : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, _borderEnd.transform.position, _speed * Time.deltaTime);
             transform.rotation = _negativeScale;
+            _healthBar.localRotation = _negativeScale;
         }
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, _borderBegin.transform.position, _speed * Time.deltaTime);
             transform.rotation = _defaultScale;
+            _healthBar.localRotation = _defaultScale;
         }
 
         Ran?.Invoke(true);

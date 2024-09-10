@@ -89,6 +89,7 @@
     <Compile Include="Assets\Items\Item.cs" />
     <Compile Include="Assets\Enemys\scripts\EnemyMover.cs" />
     <Compile Include="Assets\Enemys\scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\scripts\SliderHealthBarSmoothy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cainos\Pixel Art Platformer - Village Props\Changelog.txt" />

@@ -75,9 +75,10 @@ public class Player : MonoBehaviour
             if (item.TryGetComponent(out Coin coin))
             {
                 _wallet.TakeMoney(coin);
+                Destroy(coin.gameObject);
             }
 
-            _health.TakeHeal(item);
+            _health.TakeHeal(item.Value);
             Destroy(item.gameObject);
         }
     }
