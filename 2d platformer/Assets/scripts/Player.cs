@@ -12,18 +12,16 @@ public class Player : MonoBehaviour
     private PlayerMover _playerMover;
     private Health _health;
     private Wallet _wallet;
+    private KeyCodes _keys = new KeyCodes();
 
-    private KeyCode _interaction = KeyCode.E;
-    private KeyCode _attack = KeyCode.Mouse0;
-
-    public Collider2D PlayerCollider { get; private set; }
+    public Collider2D Collider { get; private set; }
 
     public event Action Atacked;
     public event Action Hurted;
 
     private void Awake()
     {
-        PlayerCollider = GetComponent<Collider2D>();
+        Collider = GetComponent<Collider2D>();
         _playerMover = GetComponent<PlayerMover>();
         _health = GetComponent<Health>();
         _wallet = GetComponent<Wallet>();
@@ -42,35 +40,34 @@ public class Player : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetKeyDown(_attack))
+        if (Input.GetKeyDown(_keys.Attack))
         {
             Atacked?.Invoke();
         }
     }
 
-    private bool CheckInterection()
+    private bool IskInterection()
     {
-        Vector2 point = new Vector2(PlayerCollider.bounds.center.x, PlayerCollider.bounds.min.y);
-        Vector2 size = new Vector2(PlayerCollider.bounds.size.x * 0.55f, 0.01f);
+        Vector2 point = new Vector2(Collider.bounds.center.x, Collider.bounds.min.y);
+        Vector2 size = new Vector2(Collider.bounds.size.x * 0.55f, 0.01f);
 
         return Physics2D.OverlapBox(point, size, 0, _items);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Chest chest))
+        if (collision.TryGetComponent(out Chest chest))
         {
-            if (Input.GetKey(_interaction) && CheckInterection())
+            if (Input.GetKey(_keys.Interection) && IskInterection())
             {
-                chest.GetOpen();
-                chest.DisableCollider();
+                chest.SetOpen();
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Item item))
+        if (collision.TryGetComponent(out Item item))
         {
             if (item.TryGetComponent(out Coin coin))
             {
@@ -78,8 +75,11 @@ public class Player : MonoBehaviour
                 Destroy(coin.gameObject);
             }
 
-            _health.TakeHeal(item.Value);
-            Destroy(item.gameObject);
+            if (collision.TryGetComponent(out MedKit medKit))
+            {
+                _health.TakeHeal(medKit.Value);
+                Destroy(medKit.gameObject);
+            }
         }
     }
 

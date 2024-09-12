@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemymover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemymover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|e:\\github\\2d-platformer-first\\2d platformer\\assets\\scripts\\sliderhealthbarsmoothy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sliderhealthbarsmoothy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|e:\\github\\2d-platformer-first\\2d platformer\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\scripts\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\scripts\\playermover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|e:\\github\\2d-platformer-first\\2d platformer\\assets\\scripts\\keycodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\keycodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\chests\\scripts\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\chests\\scripts\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\items\\itemmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\items\\itemmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\wizard - 2d character\\weapon\\scripts\\spawpoitnfireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,8 +43,8 @@
       "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\wizard - 2d character\\weapon\\scripts\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\scripts\\playermover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\walls\\scripts\\invisiblewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\walls\\scripts\\invisiblewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\spawnpoints\\scripts\\spawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,24 +55,16 @@
       "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\spawnpoints\\scripts\\border.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\scripts\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemyanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemyanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\scripts\\sliderhealthbarsmoothy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sliderhealthbarsmoothy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\chests\\scripts\\spawnpointchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\chests\\scripts\\spawnpointchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\items\\coins\\scripts\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\items\\coins\\scripts\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\items\\itemmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\items\\itemmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\items\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,20 +75,36 @@
       "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\items\\first aid kit\\scripts\\medkit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\chests\\scripts\\chestspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\chests\\scripts\\chestspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\items\\coins\\scripts\\coinanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\items\\coins\\scripts\\coinanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\chests\\scripts\\chestanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\chests\\scripts\\chestanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\items\\coins\\scripts\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\items\\coins\\scripts\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\walls\\scripts\\invisiblewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\walls\\scripts\\invisiblewall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemymover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemymover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\enemys\\scripts\\enemyanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\enemys\\scripts\\enemyanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\chests\\scripts\\spawnpointchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\chests\\scripts\\spawnpointchest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\chests\\scripts\\chestspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\chests\\scripts\\chestspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|E:\\GitHub\\2d-Platformer-First\\2d platformer\\assets\\chests\\scripts\\chestanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1BDC-0A2B-8EF4-8741-87A3B13DDA1A}|Assembly-CSharp.csproj|solutionrelative:assets\\chests\\scripts\\chestanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,109 +114,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SliderHealthBarSmoothy.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\SliderHealthBarSmoothy.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\SliderHealthBarSmoothy.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\SliderHealthBarSmoothy.cs",
-              "RelativeToolTip": "Assets\\scripts\\SliderHealthBarSmoothy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T18:38:28.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Player.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\Player.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Player.cs",
-              "RelativeToolTip": "Assets\\scripts\\Player.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAIAwwE0AAAApAAAA",
+              "Title": "KeyCodes.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\KeyCodes.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\KeyCodes.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\KeyCodes.cs",
+              "RelativeToolTip": "Assets\\scripts\\KeyCodes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:43:59.423Z",
+              "WhenOpened": "2024-09-12T17:01:07.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Chest.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\Chest.cs",
-              "RelativeDocumentMoniker": "Assets\\Chests\\scripts\\Chest.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\Chest.cs",
-              "RelativeToolTip": "Assets\\Chests\\scripts\\Chest.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwBgAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T12:04:58.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SpawnPointChest.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\SpawnPointChest.cs",
-              "RelativeDocumentMoniker": "Assets\\Chests\\scripts\\SpawnPointChest.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\SpawnPointChest.cs",
-              "RelativeToolTip": "Assets\\Chests\\scripts\\SpawnPointChest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:34:45.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Coin.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\Coin.cs",
-              "RelativeDocumentMoniker": "Assets\\Items\\coins\\scripts\\Coin.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\Coin.cs",
-              "RelativeToolTip": "Assets\\Items\\coins\\scripts\\Coin.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T17:22:47.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Item.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\Item.cs",
-              "RelativeDocumentMoniker": "Assets\\Items\\Item.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\Item.cs",
-              "RelativeToolTip": "Assets\\Items\\Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T16:45:29.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "MedKit.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
-              "RelativeDocumentMoniker": "Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
-              "RelativeToolTip": "Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T16:51:21.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ItemMover.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\ItemMover.cs",
-              "RelativeDocumentMoniker": "Assets\\Items\\ItemMover.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\ItemMover.cs",
-              "RelativeToolTip": "Assets\\Items\\ItemMover.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwBwAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T11:46:44.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "SpawnPoint.cs",
               "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\SpawnPoints\\Scripts\\SpawnPoint.cs",
               "RelativeDocumentMoniker": "Assets\\SpawnPoints\\Scripts\\SpawnPoint.cs",
@@ -224,166 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PlayerMover.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\PlayerMover.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\PlayerMover.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\PlayerMover.cs",
-              "RelativeToolTip": "Assets\\scripts\\PlayerMover.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAIwC4AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T19:03:50.624Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EnemyAnimator.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyAnimator.cs",
-              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\EnemyAnimator.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyAnimator.cs",
-              "RelativeToolTip": "Assets\\Enemys\\scripts\\EnemyAnimator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:34:55.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EnemyMover.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyMover.cs",
-              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\EnemyMover.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyMover.cs",
-              "RelativeToolTip": "Assets\\Enemys\\scripts\\EnemyMover.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwDkAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:35:01.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Health.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Health.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\Health.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Health.cs",
-              "RelativeToolTip": "Assets\\scripts\\Health.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:05:15.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Wallet.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Wallet.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\Wallet.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Wallet.cs",
-              "RelativeToolTip": "Assets\\scripts\\Wallet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:25:17.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\Enemy.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Enemys\\scripts\\Enemy.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAAwDUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T13:22:18.441Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SpawPoitnFireBall.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
-              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
-              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:36:33.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FireBallMover.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
-              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
-              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwBkAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:36:27.999Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FireBallAnimation.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
-              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
-              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:36:22.006Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "FireBall.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
-              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
-              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAIwDYAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T14:03:24.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Border.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\SpawnPoints\\Scripts\\Border.cs",
-              "RelativeDocumentMoniker": "Assets\\SpawnPoints\\Scripts\\Border.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\SpawnPoints\\Scripts\\Border.cs",
-              "RelativeToolTip": "Assets\\SpawnPoints\\Scripts\\Border.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T19:13:27.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CoinAnimator.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
-              "RelativeDocumentMoniker": "Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
-              "RelativeToolTip": "Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowAAAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T18:35:16.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EnemySpawner.cs",
-              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemySpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\EnemySpawner.cs",
-              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemySpawner.cs",
-              "RelativeToolTip": "Assets\\Enemys\\scripts\\EnemySpawner.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwCkAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:19:34.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
               "Title": "InvisibleWall.cs",
               "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Walls\\Scripts\\InvisibleWall.cs",
               "RelativeDocumentMoniker": "Assets\\Walls\\Scripts\\InvisibleWall.cs",
@@ -395,19 +155,273 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FireBall.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
+              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
+              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBall.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T14:03:24.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FireBallAnimation.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
+              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
+              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallAnimation.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAwwAAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:36:22.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FireBallMover.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
+              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\FireBallMover.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:36:27.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SpawPoitnFireBall.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
+              "RelativeDocumentMoniker": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
+              "RelativeToolTip": "Assets\\Wizard - 2D Character\\Weapon\\Scripts\\SpawPoitnFireBall.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:36:33.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\Enemy.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Enemys\\scripts\\Enemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T13:22:18.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Health.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Health.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Health.cs",
+              "RelativeToolTip": "Assets\\scripts\\Health.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T11:05:15.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Player.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Player.cs",
+              "RelativeToolTip": "Assets\\scripts\\Player.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwE0AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:43:59.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Chest.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\Chest.cs",
+              "RelativeDocumentMoniker": "Assets\\Chests\\scripts\\Chest.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\Chest.cs",
+              "RelativeToolTip": "Assets\\Chests\\scripts\\Chest.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T12:04:58.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerMover.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\PlayerMover.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\PlayerMover.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\PlayerMover.cs",
+              "RelativeToolTip": "Assets\\scripts\\PlayerMover.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T19:03:50.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Border.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\SpawnPoints\\Scripts\\Border.cs",
+              "RelativeDocumentMoniker": "Assets\\SpawnPoints\\Scripts\\Border.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\SpawnPoints\\Scripts\\Border.cs",
+              "RelativeToolTip": "Assets\\SpawnPoints\\Scripts\\Border.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T19:13:27.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Wallet.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Wallet.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Wallet.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\Wallet.cs",
+              "RelativeToolTip": "Assets\\scripts\\Wallet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T11:25:17.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SliderHealthBarSmoothy.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\SliderHealthBarSmoothy.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\SliderHealthBarSmoothy.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\scripts\\SliderHealthBarSmoothy.cs",
+              "RelativeToolTip": "Assets\\scripts\\SliderHealthBarSmoothy.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T18:38:28.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ItemMover.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\ItemMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Items\\ItemMover.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\ItemMover.cs",
+              "RelativeToolTip": "Assets\\Items\\ItemMover.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T11:46:44.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Item.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\Item.cs",
+              "RelativeDocumentMoniker": "Assets\\Items\\Item.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\Item.cs",
+              "RelativeToolTip": "Assets\\Items\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T16:45:29.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MedKit.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
+              "RelativeDocumentMoniker": "Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
+              "RelativeToolTip": "Assets\\Items\\first aid kit\\scripts\\MedKit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T16:51:21.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CoinAnimator.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
+              "RelativeDocumentMoniker": "Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
+              "RelativeToolTip": "Assets\\Items\\coins\\scripts\\CoinAnimator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:35:16.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Coin.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\Coin.cs",
+              "RelativeDocumentMoniker": "Assets\\Items\\coins\\scripts\\Coin.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Items\\coins\\scripts\\Coin.cs",
+              "RelativeToolTip": "Assets\\Items\\coins\\scripts\\Coin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T17:22:47.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EnemySpawner.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemySpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\EnemySpawner.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemySpawner.cs",
+              "RelativeToolTip": "Assets\\Enemys\\scripts\\EnemySpawner.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowCkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T11:19:34.614Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "EnemyMover.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\EnemyMover.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyMover.cs",
+              "RelativeToolTip": "Assets\\Enemys\\scripts\\EnemyMover.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAcwDkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:35:01.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EnemyAnimator.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyAnimator.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemys\\scripts\\EnemyAnimator.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Enemys\\scripts\\EnemyAnimator.cs",
+              "RelativeToolTip": "Assets\\Enemys\\scripts\\EnemyAnimator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:34:55.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SpawnPointChest.cs",
+              "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\SpawnPointChest.cs",
+              "RelativeDocumentMoniker": "Assets\\Chests\\scripts\\SpawnPointChest.cs",
+              "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\SpawnPointChest.cs",
+              "RelativeToolTip": "Assets\\Chests\\scripts\\SpawnPointChest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T18:34:45.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "ChestSpawner.cs",
               "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\ChestSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Chests\\scripts\\ChestSpawner.cs",
               "ToolTip": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\ChestSpawner.cs",
               "RelativeToolTip": "Assets\\Chests\\scripts\\ChestSpawner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-18T18:38:40.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "ChestAnimator.cs",
               "DocumentMoniker": "E:\\GitHub\\2d-Platformer-First\\2d platformer\\Assets\\Chests\\scripts\\ChestAnimator.cs",
               "RelativeDocumentMoniker": "Assets\\Chests\\scripts\\ChestAnimator.cs",

@@ -4,38 +4,33 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float _maxHealthPoint;
+    [SerializeField] private float _points;
 
-    public float HealthPoint { get; private set; }
-    public float MaxHealthPoint { get; private set; }
+    public float CurrentPoint { get; private set; }
+    public float MaxPoint { get; private set; }
 
     private void Awake()
     {
-        HealthPoint = _maxHealthPoint;
-        MaxHealthPoint = _maxHealthPoint;
+        CurrentPoint = _points;
+        MaxPoint = _points;
     }
     public void TakeHeal(float heal)
     {
-        HealthPoint += heal;
+        CurrentPoint += heal;
 
-        if (HealthPoint > _maxHealthPoint)
+        if (CurrentPoint > _points)
         {
-            HealthPoint = _maxHealthPoint;
+            CurrentPoint = _points;
         }
     }
 
     public void TakeDamage(float damage)
     {
-        HealthPoint -= damage;
+        CurrentPoint -= damage;
     }
 
     public bool IsDied()
     {
-        if (HealthPoint <= 0)
-        {
-            return true;
-        }
-
-        return false;
+        return CurrentPoint <= 0;
     }
 }

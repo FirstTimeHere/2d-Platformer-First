@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(ChestAnimator))]
 public class Chest : MonoBehaviour
 {
-    private BoxCollider2D _chestCollider;
+    private BoxCollider2D _collider;
 
     private List<Item> _items = new List<Item>();
 
@@ -14,27 +14,15 @@ public class Chest : MonoBehaviour
 
     private void Awake()
     {
-        _chestCollider = GetComponent<BoxCollider2D>();
-        _chestCollider.isTrigger = true;
+        _collider = GetComponent<BoxCollider2D>();
+        _collider.isTrigger = true;
     }
 
-    private void EnableAllItems()
-    {
-        foreach (Item item in _items)
-        {
-            item.gameObject.SetActive(true);
-        }
-    }
-
-    public void GetOpen()
+    public void SetOpen()
     {
         Opened?.Invoke();
         EnableAllItems();
-    }
-
-    public void DisableCollider()
-    {
-        _chestCollider.enabled = false;
+        _collider.enabled = false;
     }
 
     public void SetItems(List<Item> items)
@@ -42,6 +30,14 @@ public class Chest : MonoBehaviour
         foreach (Item item in items)
         {
             _items.Add(item);
+        }
+    }
+
+    private void EnableAllItems()
+    {
+        foreach (Item item in _items)
+        {
+            item.gameObject.SetActive(true);
         }
     }
 }

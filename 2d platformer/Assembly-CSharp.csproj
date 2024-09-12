@@ -63,6 +63,7 @@
     <Compile Include="Assets\SpawnPoints\Scripts\Border.cs" />
     <Compile Include="Assets\Chests\scripts\SpawnPointChest.cs" />
     <Compile Include="Assets\Walls\Scripts\InvisibleWall.cs" />
+    <Compile Include="Assets\scripts\KeyCodes.cs" />
     <Compile Include="Assets\Wizard - 2D Character\Weapon\Scripts\FireBallAnimation.cs" />
     <Compile Include="Assets\Wizard - 2D Character\Weapon\Scripts\FireBall.cs" />
     <Compile Include="Assets\Items\first aid kit\scripts\MedKit.cs" />

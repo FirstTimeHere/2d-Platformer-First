@@ -15,9 +15,9 @@ public class Enemy : MonoBehaviour
 
     private Coroutine _coroutine;
 
-    public float Damage { get; private set; }
-
     public event Action Attacked;
+
+    public float Damage { get; private set; }
 
     private void Awake()
     {

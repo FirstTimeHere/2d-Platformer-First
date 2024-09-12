@@ -18,13 +18,12 @@ public class PlayerMover : MonoBehaviour
     private Collider2D _collider;
 
     private Player _player;
+    private KeyCodes _key = new KeyCodes();
 
     private bool _isGrounded;
-    
+
     private Vector2 _negativeScale;
     private Vector2 _defaultScale;
-
-    private KeyCode _jump = KeyCode.Space;
 
     public event Action<bool> Jumped;
     public event Action<bool> Ran;
@@ -34,7 +33,7 @@ public class PlayerMover : MonoBehaviour
     {
         _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        _collider = _player.PlayerCollider;
+        _collider = _player.Collider;
 
         _negativeScale = _childTransform.localScale;
         _defaultScale = _childTransform.localScale;
@@ -58,11 +57,11 @@ public class PlayerMover : MonoBehaviour
 
         transform.Translate(new Vector2(horizontal, 0) * _speed * Time.deltaTime);
 
-        if (horizontal < 0 )
+        if (horizontal < 0)
         {
             _childTransform.localScale = _negativeScale;
         }
-        else if(horizontal > 0)
+        else if (horizontal > 0)
         {
             _childTransform.localScale = _defaultScale;
         }
@@ -77,7 +76,7 @@ public class PlayerMover : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(_jump) && _isGrounded)
+        if (Input.GetKeyDown(_key.Jump) && _isGrounded)
         {
             Jumped?.Invoke(true);
             Ran?.Invoke(false);

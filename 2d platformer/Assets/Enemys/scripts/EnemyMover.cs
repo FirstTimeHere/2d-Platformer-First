@@ -79,11 +79,11 @@ public class EnemyMover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == _borderBegin.ColliderBorder)
+        if (collision == _borderBegin.Collider)
         {
             _isItBorderBegin = true;
         }
-        else if (collision == _borderEnd.ColliderBorder)
+        else if (collision == _borderEnd.Collider)
         {
             _isItBorderBegin = false;
         }

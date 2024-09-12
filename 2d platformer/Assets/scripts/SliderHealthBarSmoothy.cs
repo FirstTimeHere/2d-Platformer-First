@@ -16,8 +16,8 @@ public class SliderHealthBarSmoothy : MonoBehaviour
 
     private void Start()
     {
-        _slider.maxValue = _health.MaxHealthPoint;
-        _slider.value = _health.HealthPoint;
+        _slider.maxValue = _health.MaxPoint;
+        _slider.value = _health.CurrentPoint;
     }
 
     private void Update()
@@ -27,6 +27,6 @@ public class SliderHealthBarSmoothy : MonoBehaviour
 
     private void ChangeSlider()
     {
-        _slider.value = Mathf.MoveTowards(_slider.value, _health.HealthPoint, Time.deltaTime * _sliderSpeedChange);
+        _slider.value = Mathf.MoveTowards(_slider.value, _health.CurrentPoint, Time.deltaTime * _sliderSpeedChange);
     }
 }

@@ -43,11 +43,6 @@ public class FireBall : MonoBehaviour
         }
     }
 
-    public void GetPlayerLocalScale(Vector2 playerLocalScale)
-    {
-        _mover.GetPlayerLocalScale(playerLocalScale);
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent(out Enemy enemy))
@@ -55,5 +50,10 @@ public class FireBall : MonoBehaviour
             enemy.TakeDamageFireBall(gameObject.GetComponent<FireBall>());
             Destroy(gameObject);
         }
+    }
+
+    public void GetPlayerLocalScale(Vector2 playerLocalScale)
+    {
+        _mover.GetPlayerLocalScale(playerLocalScale);
     }
 }
