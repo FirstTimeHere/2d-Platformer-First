@@ -16,7 +16,7 @@ public class SliderHealthBarSmoothy : MonoBehaviour
 
     private void Start()
     {
-        _slider.maxValue = _health.MaxPoint;
+        _slider.maxValue = _health.Value;
         _slider.value = _health.CurrentPoint;
     }
 

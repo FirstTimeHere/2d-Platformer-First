@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(EnemyMover))]
 public class Enemy : MonoBehaviour
 {
     private EnemyMover _mover;
@@ -26,34 +28,16 @@ public class Enemy : MonoBehaviour
         _health = GetComponent<Health>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (_health.IsDied())
-        {
-            Destroy(gameObject);
-        }
+        _health.Dead += OnDead;
     }
 
-    public void SetBorders(Border border, Border secondBorder)
+    private void OnDisable()
     {
-        _mover.GetBorders(border, secondBorder);
+        _health.Dead -= OnDead;
     }
-
-    public void TakeDamageFireBall(FireBall fireBall)
-    {
-        _health.TakeDamage(fireBall.Damage);
-    }
-
-    public void SetDamage(float damage)
-    {
-        Damage = damage;
-    }
-
-    public void SetSpeed(float speed)
-    {
-        _mover.GetSpeed(speed);
-    }
-
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Player player))
@@ -92,5 +76,29 @@ public class Enemy : MonoBehaviour
 
             yield return wait;
         }
+    }
+    private void OnDead()
+    {
+        Destroy(gameObject);
+    }
+
+    public void SetBorders(Border border, Border secondBorder)
+    {
+        _mover.GetBorders(border, secondBorder);
+    }
+
+    public void TakeDamageFireBall(FireBall fireBall)
+    {
+        _health.TakeDamage(fireBall.Damage);
+    }
+
+    public void SetDamage(float damage)
+    {
+        Damage = damage;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        _mover.GetSpeed(speed);
     }
 }

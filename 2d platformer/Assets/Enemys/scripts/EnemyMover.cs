@@ -37,6 +37,18 @@ public class EnemyMover : MonoBehaviour
         Move(); 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision == _borderBegin.Collider)
+        {
+            _isItBorderBegin = true;
+        }
+        else if (collision == _borderEnd.Collider)
+        {
+            _isItBorderBegin = false;
+        }
+    }
+
     private void Move()
     {
         if (TryDectedPlayer())
@@ -75,18 +87,6 @@ public class EnemyMover : MonoBehaviour
         }
 
         return null;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision == _borderBegin.Collider)
-        {
-            _isItBorderBegin = true;
-        }
-        else if (collision == _borderEnd.Collider)
-        {
-            _isItBorderBegin = false;
-        }
     }
 
     public void GetSpeed(float speed)

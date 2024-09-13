@@ -1,35 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float _points;
+    [field: SerializeField] public float Value { get; private set; }
+
+    public event Action Dead;
 
     public float CurrentPoint { get; private set; }
-    public float MaxPoint { get; private set; }
 
     private void Awake()
     {
-        CurrentPoint = _points;
-        MaxPoint = _points;
+        CurrentPoint = Value;
     }
+
     public void TakeHeal(float heal)
     {
         CurrentPoint += heal;
 
-        if (CurrentPoint > _points)
+        if (CurrentPoint > Value)
         {
-            CurrentPoint = _points;
+            CurrentPoint = Value;
         }
     }
 
     public void TakeDamage(float damage)
     {
         CurrentPoint -= damage;
+
+        if(IsDied())
+        {
+            Dead?.Invoke();
+        }
     }
 
-    public bool IsDied()
+    private bool IsDied()
     {
         return CurrentPoint <= 0;
     }

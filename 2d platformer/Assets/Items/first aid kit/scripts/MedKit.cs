@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MedKit : Item
 {
-    [SerializeField] private float _healthPoint;
+    [SerializeField] private float _value;
 
-    public override float Value => _healthPoint;
+    public override float Value => _value;
 }

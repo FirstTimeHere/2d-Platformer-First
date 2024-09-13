@@ -21,7 +21,7 @@ public class InvisibleWall : MonoBehaviour
     {
         if (collision.TryGetComponent(out Player player))
         {
-            collision.transform.position = _playerSpawnPoint.transform.position;
+            player.transform.position = _playerSpawnPoint.transform.position;
         }
     }
 }

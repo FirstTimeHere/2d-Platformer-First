@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(CoinAnimator))]
 public class Coin : Item
 {
-    [SerializeField] private int _coinValue;
+    [SerializeField] private int _value;
 
-    public override float Value => _coinValue;
+    public override float Value => _value;
 }

@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = _enemyCount; i > 0; i--)
         {
-            List<Border> borders = _spawnPoints[i - 1].GetBorders();
+            List<Border> borders = _spawnPoints[i - 1].SetBorders();
 
             Enemy enemy = Instantiate(_enemies[_enemies.Count - 1]);
             enemy.transform.position = _spawnPoints[i - 1].transform.position;

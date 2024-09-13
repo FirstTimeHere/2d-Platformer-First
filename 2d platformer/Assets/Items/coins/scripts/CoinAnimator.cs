@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class CoinAnimator : MonoBehaviour
 {
-    [SerializeField] private Sprite[] _coinAnimation;
+    [SerializeField] private Sprite[] _sprites;
     [SerializeField] private float _animationTime;
 
     private SpriteRenderer _spriteRenderer;
@@ -24,10 +25,10 @@ public class CoinAnimator : MonoBehaviour
     {
         _animationFrame++;
 
-        if (_animationFrame >= _coinAnimation.Length)
+        if (_animationFrame >= _sprites.Length)
             _animationFrame = 0;
 
-        _spriteRenderer.sprite = _coinAnimation[_animationFrame];
+        _spriteRenderer.sprite = _sprites[_animationFrame];
     }
 
     private IEnumerator LoopAnimation(float delay)

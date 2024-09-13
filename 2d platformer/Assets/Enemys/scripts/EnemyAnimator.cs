@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyMover))]
+[RequireComponent(typeof(Enemy))]
 public class EnemyAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
@@ -15,22 +17,22 @@ public class EnemyAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        _enemyMover.Ran += Run;
-        _enemy.Attacked += Attacked;
+        _enemyMover.Ran += OnRun;
+        _enemy.Attacked += OnAttacked;
     }
 
     private void OnDisable()
     {
-        _enemyMover.Ran -= Run;
-        _enemy.Attacked -= Attacked;
+        _enemyMover.Ran -= OnRun;
+        _enemy.Attacked -= OnAttacked;
     }
 
-    private void Run(bool isJumped)
+    private void OnRun(bool isJumped)
     {
         _animator.SetBool(Params.IsRun, isJumped);
     }
 
-    private void Attacked()
+    private void OnAttacked()
     {
         _animator.SetTrigger(Params.Attacked);
     }

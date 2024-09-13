@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class FireBallAnimation : MonoBehaviour
 {
-    [SerializeField] private Sprite[] _fireBallAnimation;
+    [SerializeField] private Sprite[] _sprites;
     [SerializeField] private float _animationTime;
 
     private SpriteRenderer _spriteRenderer;
@@ -24,10 +25,10 @@ public class FireBallAnimation : MonoBehaviour
     {
         _animationFrame++;
 
-        if (_animationFrame >= _fireBallAnimation.Length)
+        if (_animationFrame >= _sprites.Length)
             _animationFrame = 0;
 
-        _spriteRenderer.sprite = _fireBallAnimation[_animationFrame];
+        _spriteRenderer.sprite = _sprites[_animationFrame];
     }
 
     private IEnumerator LoopAnimation(float delay)

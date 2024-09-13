@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Chest))]
 public class ChestAnimator : MonoBehaviour
 {
     private Animator _animator;
@@ -14,15 +15,15 @@ public class ChestAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        _chest.Opened += Open;
+        _chest.Opened += OnOpened;
     }
 
     private void OnDisable()
     {
-        _chest.Opened -= Open;
+        _chest.Opened -= OnOpened;
     }
 
-    private void Open()
+    private void OnOpened()
     {
         _animator.SetTrigger(Params.IsOpen);
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(FireBallAnimation))]
+[RequireComponent(typeof(FireBallMover))]
 public class FireBall : MonoBehaviour
 {
     private float _fireBallLifeTimer = 2f;

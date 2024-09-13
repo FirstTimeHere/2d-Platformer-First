@@ -1,6 +1,8 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Animator))]
+[RequireComponent (typeof(PlayerMover))]
+[RequireComponent (typeof(Player))]
 public class PlayerAnimator : MonoBehaviour
 {
     private Animator _animator;
@@ -16,44 +18,43 @@ public class PlayerAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerMover.Ran += Run;
-        _player.Atacked += Atacked;
-        _playerMover.Jumped += Jump;
-        _playerMover.CameBackIdle += Idle;
-        _player.Hurted += Hurted;
-
+        _playerMover.Ran += OnRan;
+        _player.Atacked += OnAtacked;
+        _playerMover.Jumped += OnJumped;
+        _playerMover.CameBackIdle += OnCameBackIdle;
+        _player.Hurted += OnHurted;
     }
 
     private void OnDisable()
     {
-        _playerMover.Ran -= Run; 
-        _player.Atacked -= Atacked;
-        _playerMover.Jumped -= Jump;
-        _player.Hurted -= Hurted;
-        _playerMover.CameBackIdle -= Idle; 
+        _playerMover.Ran -= OnRan; 
+        _player.Atacked -= OnAtacked;
+        _playerMover.Jumped -= OnJumped;
+        _player.Hurted -= OnHurted;
+        _playerMover.CameBackIdle -= OnCameBackIdle; 
     }
 
-    private void Jump(bool isJumped)
+    private void OnJumped(bool isJumped)
     {
         _animator.SetBool(Params.IsJumped, isJumped);
     }
 
-    private void Idle(bool isJumped)
+    private void OnCameBackIdle(bool isJumped)
     {
         _animator.SetBool(Params.IsIdle, isJumped);
     }
 
-    private void Run(bool isJumped)
+    private void OnRan(bool isJumped)
     {
         _animator.SetBool(Params.IsRun, isJumped);
     }
 
-    private void Atacked()
+    private void OnAtacked()
     {
         _animator.SetTrigger(Params.Atacked);
     }
 
-    private void Hurted()
+    private void OnHurted()
     {
         _animator.SetTrigger(Params.TakeDamage);
     }

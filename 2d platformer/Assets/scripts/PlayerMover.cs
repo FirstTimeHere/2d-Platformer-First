@@ -3,6 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Player))]
 [RequireComponent(typeof(PlayerAnimator))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMover : MonoBehaviour
 {
     private const string Horizontal = nameof(Horizontal);
@@ -48,7 +49,7 @@ public class PlayerMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _isGrounded = CheckGround();
+        _isGrounded = IsGround();
     }
 
     private void Move()
@@ -91,7 +92,7 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
-    private bool CheckGround()
+    private bool IsGround()
     {
         Vector2 point = new Vector2(_collider.bounds.center.x, _collider.bounds.min.y);
         Vector2 size = new Vector2(_collider.bounds.size.x * 0.55f, 0.01f);

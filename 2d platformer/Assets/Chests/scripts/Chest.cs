@@ -18,6 +18,14 @@ public class Chest : MonoBehaviour
         _collider.isTrigger = true;
     }
 
+    private void EnableAllItems()
+    {
+        foreach (Item item in _items)
+        {
+            item.gameObject.SetActive(true);
+        }
+    }
+
     public void SetOpen()
     {
         Opened?.Invoke();
@@ -30,14 +38,6 @@ public class Chest : MonoBehaviour
         foreach (Item item in items)
         {
             _items.Add(item);
-        }
-    }
-
-    private void EnableAllItems()
-    {
-        foreach (Item item in _items)
-        {
-            item.gameObject.SetActive(true);
         }
     }
 }
