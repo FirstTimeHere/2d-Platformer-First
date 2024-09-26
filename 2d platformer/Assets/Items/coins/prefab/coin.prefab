@@ -135,8 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f1f694461dbf346ad5ba3ab46514d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinAnimation:
-  - {fileID: 2013556589, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
+  _sprites:
   - {fileID: -658699655, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
   - {fileID: -1078578710, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
   - {fileID: 880038555, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
@@ -149,6 +148,7 @@ MonoBehaviour:
   - {fileID: 924587043, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
   - {fileID: -2132931096, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
   - {fileID: 1310087735, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
+  - {fileID: 2013556589, guid: 79ee0525ca4a0d3478748e9285ca9add, type: 3}
   _animationTime: 0.05
 --- !u!114 &3935272105917231581
 MonoBehaviour:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ffd1d6029e6e840a5c844708fc882c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinValue: 100
+  _value: 100
 --- !u!114 &309037658169456557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,4 +176,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.5
-  _timerActive: 3

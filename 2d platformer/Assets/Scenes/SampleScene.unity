@@ -169,7 +169,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447626024}
-  - component: {fileID: 447626025}
   m_Layer: 7
   m_Name: SpawnPointFireBall
   m_TagString: Untagged
@@ -192,20 +191,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1675020427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &447626025
+--- !u!1 &482496559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3581684743427378859, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
+  m_PrefabInstance: {fileID: 1580674442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &482496563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447626023}
-  m_Enabled: 1
+  m_GameObject: {fileID: 482496559}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c70786e6cad17b5448b8d05d049cdcfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _fireBall: {fileID: 4441351082393703410, guid: 04e59f8d62f120f4f8285c99e084120e, type: 3}
   _player: {fileID: 1580674444}
+  _spawnPointFireball: {fileID: 447626024}
+  _valueFireBall: 30
+--- !u!114 &482496564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482496559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91acb86aaf54eb444a0afb337d71064c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 15
+  _direction: 5
+  _precentHeal: 25
+  _time: 5
+  _targetMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &507755670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4466019154271281103, guid: 3ab235ab77b450641b67f9b57de7cb7f, type: 3}
@@ -1068,6 +1093,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3581684743427378859, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
+      propertyPath: m_Name
+      value: FireballStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581684743427378859, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
@@ -1265,6 +1294,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4105362945620786469, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1580674454}
+    - targetCorrespondingSourceObject: {fileID: 3581684743427378859, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 482496563}
+    - targetCorrespondingSourceObject: {fileID: 3581684743427378859, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 482496564}
   m_SourcePrefab: {fileID: 100100000, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
 --- !u!4 &1580674443 stripped
 Transform:

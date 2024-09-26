@@ -80,7 +80,7 @@ public class EnemyMover : MonoBehaviour
 
         if (hit2D)
         {
-            if (hit2D.collider.GetComponent<Player>())
+            if (hit2D.collider.TryGetComponent(out Player player))
             {
                 return hit2D.collider.transform;
             }

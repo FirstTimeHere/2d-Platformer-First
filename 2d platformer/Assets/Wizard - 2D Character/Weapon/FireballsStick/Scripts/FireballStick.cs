@@ -1,9 +1,15 @@
 using UnityEngine;
 
-public class SpawPoitnFireBall : MonoBehaviour
+public class FireballStick : Weapon
 {
     [SerializeField] private FireBall _fireBall;
     [SerializeField] private Player _player;
+
+    [SerializeField] private Transform _spawnPointFireball;
+
+    [SerializeField] private float _valueFireBall;
+
+    public override float Value => _valueFireBall;
 
     private void OnEnable()
     {
@@ -19,7 +25,9 @@ public class SpawPoitnFireBall : MonoBehaviour
     {
         FireBall fireBall = Instantiate(_fireBall);
 
-        fireBall.transform.position = transform.position;
+        fireBall.SetDamage(Value);
+
+        fireBall.transform.position = _spawnPointFireball.position;
 
         fireBall.GetPlayerLocalScale(_player.GetChildLocalScale());
     }

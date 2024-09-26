@@ -188,11 +188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b80c628c514f6547945bb161160d1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireBallAnimation:
+  _sprites:
+  - {fileID: 1081641827, guid: 731333545fc83064888e56c7792798b3, type: 3}
   - {fileID: 965163466, guid: 731333545fc83064888e56c7792798b3, type: 3}
   - {fileID: 1635931512, guid: 731333545fc83064888e56c7792798b3, type: 3}
   - {fileID: -386817460, guid: 731333545fc83064888e56c7792798b3, type: 3}
   - {fileID: 2027185182, guid: 731333545fc83064888e56c7792798b3, type: 3}
   - {fileID: -1814802335, guid: 731333545fc83064888e56c7792798b3, type: 3}
-  - {fileID: 1081641827, guid: 731333545fc83064888e56c7792798b3, type: 3}
   _animationTime: 0.25

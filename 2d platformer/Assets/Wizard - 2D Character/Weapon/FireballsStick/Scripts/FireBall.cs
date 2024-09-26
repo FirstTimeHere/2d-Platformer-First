@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class FireBall : MonoBehaviour
    
     private FireBallMover _mover;
 
-    public float Damage { get; private set; } = 30f;
+    public float Damage { get; private set; }
 
     private void Awake()
     {
@@ -56,5 +57,10 @@ public class FireBall : MonoBehaviour
     public void GetPlayerLocalScale(Vector2 playerLocalScale)
     {
         _mover.GetPlayerLocalScale(playerLocalScale);
+    }
+
+    public void SetDamage(float value)
+    {
+        Damage = value;
     }
 }
