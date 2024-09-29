@@ -387,6 +387,7 @@
 "Assets/Items/first aid kit/scripts/MedKit.cs"
 "Assets/Items/Item.cs"
 "Assets/Items/ItemMover.cs"
+"Assets/scripts/Ammunition.cs"
 "Assets/scripts/Health.cs"
 "Assets/scripts/KeyCodes.cs"
 "Assets/scripts/Player.cs"
@@ -405,7 +406,8 @@
 "Assets/Wizard - 2D Character/Weapon/FireballsStick/Scripts/FireBallMover.cs"
 "Assets/Wizard - 2D Character/Weapon/FireballsStick/Scripts/FireballStick.cs"
 "Assets/Wizard - 2D Character/Weapon/Scripts/Weapon.cs"
-"Assets/Wizard - 2D Character/Weapon/VampireMask/VampireMask.cs"
+"Assets/Wizard - 2D Character/Weapon/VampireMask/Scripts/SpawnerWeapons.cs"
+"Assets/Wizard - 2D Character/Weapon/VampireMask/Scripts/VampireMask.cs"
 -langversion:9.0
 /deterministic
 /optimize+

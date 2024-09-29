@@ -7,13 +7,13 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(FireBallAnimation))]
 [RequireComponent(typeof(FireBallMover))]
-public class FireBall : MonoBehaviour
+public class FireBall : Ammunition
 {
     private float _fireBallLifeTimer = 2f;
    
     private FireBallMover _mover;
 
-    public float Damage { get; private set; }
+    public override float Damage { get; protected set;}
 
     private void Awake()
     {
@@ -49,7 +49,7 @@ public class FireBall : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Enemy enemy))
         {
-            enemy.TakeDamageFireBall(gameObject.GetComponent<FireBall>());
+            enemy.TakeDamage(gameObject.GetComponent<Ammunition>());
             Destroy(gameObject);
         }
     }

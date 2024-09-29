@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -9,11 +11,17 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask _items;
+    [SerializeField] private Weapon _defaultWeapon;
+    [SerializeField] private Transform _positionMask;
 
     private PlayerMover _playerMover;
     private Health _health;
     private Wallet _wallet;
     private KeyCodes _keys = new KeyCodes();
+
+    private int _indexWeapon = 0;
+
+    private List<Weapon> _weapons = new List<Weapon>();
 
     public event Action Atacked;
     public event Action Hurted;
@@ -22,6 +30,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        _weapons.Add(_defaultWeapon);
         Collider = GetComponent<Collider2D>();
         _playerMover = GetComponent<PlayerMover>();
         _health = GetComponent<Health>();
@@ -40,7 +49,28 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        TryRouletteWeapons();
         Attack();
+    }
+
+    private void TryRouletteWeapons()
+    {
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            _indexWeapon++;
+
+            if (_indexWeapon == _weapons.Count)
+            {
+                _indexWeapon = 0;
+            }
+
+            for (int i = 0; i < _weapons.Count; i++)
+            {
+                _weapons[i].gameObject.SetActive(false);
+            }
+
+            _weapons[_indexWeapon].gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -68,6 +98,16 @@ public class Player : MonoBehaviour
                 _health.TakeHeal(medKit.Value);
                 Destroy(medKit.gameObject);
             }
+        }
+
+        if (collision.TryGetComponent(out Weapon weapon))
+        {
+            if (weapon is VampireMask mask)
+            {
+                mask.transform.position = _positionMask.position;
+                //mask.GetPosition(_positionMask.position);
+                _weapons.Add(mask);
+            }         
         }
     }
 
@@ -102,5 +142,10 @@ public class Player : MonoBehaviour
     {
         Hurted?.Invoke();
         _health.TakeDamage(enemy.Damage);
+    }
+
+    public void VampireHeal(VampireMask mask)
+    {
+        _health.TakeHeal(mask.Heal);
     }
 }

@@ -87,9 +87,14 @@ public class Enemy : MonoBehaviour
         _mover.GetBorders(border, secondBorder);
     }
 
-    public void TakeDamageFireBall(FireBall fireBall)
+    public void TakeDamage(Ammunition ammunition)
     {
-        _health.TakeDamage(fireBall.Damage);
+        _health.TakeDamage(ammunition.Damage);
+    }
+
+    public void TakeDamage(Weapon weapon)
+    {
+        _health.TakeDamage(weapon.Value);
     }
 
     public void SetDamage(float damage)
