@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class VampireMask : Weapon
@@ -12,29 +12,27 @@ public class VampireMask : Weapon
     [SerializeField] private LayerMask _targetMask;
 
     private float _heal;
-    private float _tempTime;
-    private float _delay = 0.2f;
+    private float _delay = 1f;
 
-    private bool _isReady = true;
+    private bool _isAttack;
 
     private KeyCodes _keys = new KeyCodes();
 
     private Coroutine _coroutine;
 
-    private Vector2 _directionVampire;
+    private Vector2 _localScale;
+    private Vector2 _rotateByScale;
 
     private Player _player;
     private VampireMask _mask;
 
     private Collider2D _collider;
-    /// <summary>
-    /// делаем луч на определенное (короткое) расстояние и проверяем если есть враг запускает отсчет по времмени
-    /// например секунд 5
-    /// также сделать выбор между оружиями, если реализован подбор
-    /// делать неактивными оружие, есди его заменили (потом возвращать)
-    /// </summary>
 
     public override float Value => _value;
+
+    public float TempTime { get; private set; }
+
+    public override float ReloadTime => _time;
 
     public float Heal { get; private set; }
 
@@ -42,10 +40,18 @@ public class VampireMask : Weapon
     {
         _mask = GetComponent<VampireMask>();
         _collider = GetComponent<Collider2D>();
-        _directionVampire = new Vector2(_direction, 0);
+
+        _localScale = transform.localScale;
+        _rotateByScale = transform.localScale;
+
         _heal = _value / _precentHeal;
         Heal = _heal;
-        _tempTime = 5f;
+        TempTime = _time;
+    }
+
+    private void FixedUpdate()
+    {
+        transform.localScale = _rotateByScale;
     }
 
     private void Update()
@@ -53,35 +59,26 @@ public class VampireMask : Weapon
         if (_player != null)
         {
             bool isUserClicked = Input.GetKey(_keys.Attack);
+            _isAttack = isUserClicked;
 
-            if (enabled)
+            if (isUserClicked)
             {
-                Debug.DrawRay(transform.position, _directionVampire, Color.red);
-                GetUse(isUserClicked);
+                Enemy enemy;
+
+                if (IsItEnemy(_player._childTransform.localScale) && TempTime > 0)
+                {
+                    TempTime--;
+                    enemy = IsItEnemy(_player._childTransform.localScale);
+                    Stop();
+                    _coroutine = StartCoroutine(GetUseAblity(_delay, enemy));
+                }
+                else if (TempTime <= 0)
+                {
+                    Stop();
+                    _coroutine = StartCoroutine(ReturnTimerBack(_delay));
+                }
             }
         }
-    }
-
-    private void GetUse(bool isUserClicked)
-    {
-        Enemy enemy = IsItEnemy();
-
-        if (_tempTime == 0)
-        {
-            _isReady = false;
-            Stop();
-        }
-
-        if (isUserClicked && IsItEnemy() && _isReady)
-        {
-            _coroutine = StartCoroutine(GetUseAblity(_delay, enemy));
-        }
-    }
-
-    private void RealoadingWeapon()
-    {
-        _tempTime = _time;
-        _isReady = true;
     }
 
     private void Stop()
@@ -93,9 +90,18 @@ public class VampireMask : Weapon
         }
     }
 
-    private Enemy IsItEnemy()
+    private Enemy IsItEnemy(Vector3 rotationPlayer)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, _direction, _targetMask);
+        RaycastHit2D hit;
+
+        if (rotationPlayer.x < 0)
+        {
+            hit = Physics2D.Raycast(transform.position, -transform.right, _direction, _targetMask);
+        }
+        else
+        {
+            hit = Physics2D.Raycast(transform.position, transform.right, _direction, _targetMask);
+        }
 
         if (hit)
         {
@@ -110,17 +116,26 @@ public class VampireMask : Weapon
 
     private IEnumerator GetUseAblity(float delay, Enemy enemy)
     {
-        var wait = new WaitForSecondsRealtime(delay);
+        var wait = new WaitForSeconds(delay);
 
-        while (_tempTime > 0)
+        while (_isAttack && TempTime > 0)
         {
             enemy.TakeDamage(gameObject.GetComponent<Weapon>());
             _player.VampireHeal(_mask);
-            _tempTime--;
+
             yield return wait;
         }
+    }
 
-        Invoke(nameof(RealoadingWeapon), _time);
+    private IEnumerator ReturnTimerBack(float delay)
+    {
+        var wait = new WaitForSeconds(delay);
+
+        while (TempTime < _time)
+        {
+            TempTime++;
+            yield return wait;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -129,7 +144,10 @@ public class VampireMask : Weapon
         {
             _collider.enabled = false;
             _player = player;
-            transform.parent=_player.transform;
+            transform.parent = _player._childTransform;
+            transform.localScale = _localScale;
+            _rotateByScale = _player._childTransform.localScale;
+            gameObject.SetActive(false);
         }
     }
 }

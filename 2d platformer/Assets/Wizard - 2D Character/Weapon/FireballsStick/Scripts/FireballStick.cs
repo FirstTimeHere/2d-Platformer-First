@@ -10,6 +10,7 @@ public class FireballStick : Weapon
     [SerializeField] private float _valueFireBall;
 
     public override float Value => _valueFireBall;
+    public override float ReloadTime { get; }
 
     private void OnEnable()
     {

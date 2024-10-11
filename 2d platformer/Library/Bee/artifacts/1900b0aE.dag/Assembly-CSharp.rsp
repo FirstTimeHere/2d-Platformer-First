@@ -406,6 +406,7 @@
 "Assets/Wizard - 2D Character/Weapon/FireballsStick/Scripts/FireBallMover.cs"
 "Assets/Wizard - 2D Character/Weapon/FireballsStick/Scripts/FireballStick.cs"
 "Assets/Wizard - 2D Character/Weapon/Scripts/Weapon.cs"
+"Assets/Wizard - 2D Character/Weapon/Scripts/WeaponInfo.cs"
 "Assets/Wizard - 2D Character/Weapon/VampireMask/Scripts/SpawnerWeapons.cs"
 "Assets/Wizard - 2D Character/Weapon/VampireMask/Scripts/VampireMask.cs"
 -langversion:9.0

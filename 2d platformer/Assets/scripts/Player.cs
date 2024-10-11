@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask _items;
     [SerializeField] private Weapon _defaultWeapon;
     [SerializeField] private Transform _positionMask;
+    [field: SerializeField] public Transform _childTransform { get; private set; }
 
     private PlayerMover _playerMover;
     private Health _health;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
 
     public event Action Atacked;
     public event Action Hurted;
+    public event Action ChangedWeapon;
 
     public Collider2D Collider { get; private set; }
 
@@ -71,13 +73,20 @@ public class Player : MonoBehaviour
 
             _weapons[_indexWeapon].gameObject.SetActive(true);
         }
+
+        ChangedWeapon?.Invoke();
+    }
+
+    public Weapon SetWeaponActive()
+    {
+        return _weapons[_indexWeapon];
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Chest chest))
         {
-            if (Input.GetKey(_keys.Interection) && IsInterection())
+            if (Input.GetKeyDown(_keys.Interection) && IsInterection())
             {
                 chest.SetOpen();
             }
@@ -105,7 +114,6 @@ public class Player : MonoBehaviour
             if (weapon is VampireMask mask)
             {
                 mask.transform.position = _positionMask.position;
-                //mask.GetPosition(_positionMask.position);
                 _weapons.Add(mask);
             }         
         }
