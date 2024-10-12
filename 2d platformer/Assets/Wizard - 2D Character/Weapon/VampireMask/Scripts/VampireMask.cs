@@ -1,7 +1,7 @@
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class VampireMask : Weapon
 {
     [SerializeField] private float _value;
@@ -13,6 +13,7 @@ public class VampireMask : Weapon
 
     private float _heal;
     private float _delay = 1f;
+    private float _tempTime;
 
     private bool _isAttack;
 
@@ -30,9 +31,7 @@ public class VampireMask : Weapon
 
     public override float Value => _value;
 
-    public float TempTime { get; private set; }
-
-    public override float ReloadTime => _time;
+    public override float ReloadTime => _tempTime;
 
     public float Heal { get; private set; }
 
@@ -46,7 +45,7 @@ public class VampireMask : Weapon
 
         _heal = _value / _precentHeal;
         Heal = _heal;
-        TempTime = _time;
+        _tempTime = _time;
     }
 
     private void FixedUpdate()
@@ -65,18 +64,18 @@ public class VampireMask : Weapon
             {
                 Enemy enemy;
 
-                if (IsItEnemy(_player._childTransform.localScale) && TempTime > 0)
+                if (IsItEnemy(_player._childTransform.localScale) && _tempTime > 0)
                 {
-                    TempTime--;
+                    _tempTime--;
                     enemy = IsItEnemy(_player._childTransform.localScale);
                     Stop();
                     _coroutine = StartCoroutine(GetUseAblity(_delay, enemy));
                 }
-                else if (TempTime <= 0)
-                {
-                    Stop();
-                    _coroutine = StartCoroutine(ReturnTimerBack(_delay));
-                }
+            }
+            else if (_tempTime <= 0)
+            {
+                Stop();
+                _coroutine = StartCoroutine(ReturnTimerBack(_delay));
             }
         }
     }
@@ -118,7 +117,7 @@ public class VampireMask : Weapon
     {
         var wait = new WaitForSeconds(delay);
 
-        while (_isAttack && TempTime > 0)
+        while (_isAttack && _tempTime > 0)
         {
             enemy.TakeDamage(gameObject.GetComponent<Weapon>());
             _player.VampireHeal(_mask);
@@ -131,9 +130,10 @@ public class VampireMask : Weapon
     {
         var wait = new WaitForSeconds(delay);
 
-        while (TempTime < _time)
+        while (_tempTime < _time)
         {
-            TempTime++;
+            _tempTime++;
+
             yield return wait;
         }
     }

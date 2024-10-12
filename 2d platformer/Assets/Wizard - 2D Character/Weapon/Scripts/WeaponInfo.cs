@@ -1,14 +1,10 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class WeaponInfo : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private TextMeshProUGUI _value;
-    [SerializeField] private Slider _slider;
-    [SerializeField] private float _sliderSpeedChange;
-
 
     private Weapon _weapon;
 
@@ -22,27 +18,18 @@ public class WeaponInfo : MonoBehaviour
         _player.ChangedWeapon -= ShowStats;
     }
 
-    //private void Update()
-    //{
-    //        _slider.value = Mathf.MoveTowards(_slider.value, mask.TempTime, Time.deltaTime * _sliderSpeedChange);
-    //}
-
     private void ShowStats()
     {
         _weapon = _player.SetWeaponActive();
 
-        if (_weapon is VampireMask mask)
-        {
+        _value.text = GetText(_weapon.Value, _weapon.ReloadTime);
+    }
 
-            //_slider.minValue = 0;
-            //_slider.maxValue = mask.TempTime;
-            _value.text = $"Текущее значение урона: {mask.Value}" + "\n"
-                        + $"Перезарядка: {mask.TempTime}";
-        }
-        else
-        {
-            _value.text = $"Текущее значение урона: {_weapon.Value}" + "\n"
-            + $"Перезарядка: {_weapon.ReloadTime}";
-        }
+    private string GetText(float value, float reloadTime)
+    {
+        string text = $"Текущее значение урона: {value}" + "\n"
+                        + $"Перезарядка: {reloadTime}";
+
+        return text;
     }
 }
