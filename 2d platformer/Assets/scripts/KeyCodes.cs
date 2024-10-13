@@ -7,4 +7,6 @@ public class KeyCodes
     public KeyCode Interection { get; private set; } = KeyCode.E;
 
     public KeyCode Attack { get; private set; } = KeyCode.Mouse0;
+
+    public KeyCode ChangeWeapon { get; private set; } = KeyCode.Q;
 }

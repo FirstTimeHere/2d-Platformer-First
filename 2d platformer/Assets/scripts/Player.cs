@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,26 +12,27 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask _items;
     [SerializeField] private Weapon _defaultWeapon;
     [SerializeField] private Transform _positionMask;
-    [field: SerializeField] public Transform _childTransform { get; private set; }
+    [field: SerializeField] public Transform ChildTransform { get; private set; }
 
     private PlayerMover _playerMover;
     private Health _health;
     private Wallet _wallet;
     private KeyCodes _keys = new KeyCodes();
 
-    private int _indexWeapon = 0;
-
     private List<Weapon> _weapons = new List<Weapon>();
 
     public event Action Atacked;
     public event Action Hurted;
-    public event Action ChangedWeapon;
+    public event Action AddedWeapon;
 
     public Collider2D Collider { get; private set; }
 
     private void Awake()
     {
         _weapons.Add(_defaultWeapon);
+
+        AddedWeapon?.Invoke();
+
         Collider = GetComponent<Collider2D>();
         _playerMover = GetComponent<PlayerMover>();
         _health = GetComponent<Health>();
@@ -51,36 +51,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        TryRouletteWeapons();
         Attack();
     }
 
-    private void TryRouletteWeapons()
-    {
-        if (Input.GetKeyUp(KeyCode.Q))
-        {
-            _indexWeapon++;
-
-            if (_indexWeapon == _weapons.Count)
-            {
-                _indexWeapon = 0;
-            }
-
-            for (int i = 0; i < _weapons.Count; i++)
-            {
-                _weapons[i].gameObject.SetActive(false);
-            }
-
-            _weapons[_indexWeapon].gameObject.SetActive(true);
-        }
-
-        ChangedWeapon?.Invoke();
-    }
-
-    public Weapon SetWeaponActive()
-    {
-        return _weapons[_indexWeapon];
-    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -115,14 +88,14 @@ public class Player : MonoBehaviour
             {
                 mask.transform.position = _positionMask.position;
                 _weapons.Add(mask);
-            }         
+                AddedWeapon?.Invoke();
+            }
         }
     }
 
     private void OnDead()
     {
         gameObject.SetActive(false);
-        Debug.Log("Умер");
     }
 
     private void Attack()
@@ -152,8 +125,20 @@ public class Player : MonoBehaviour
         _health.TakeDamage(enemy.Damage);
     }
 
-    public void VampireHeal(VampireMask mask)
+    public void TakeVampireHeal(float heal)
     {
-        _health.TakeHeal(mask.Heal);
+        _health.TakeHeal(heal);
+    }
+
+    public List<Weapon> SetWeapons()
+    {
+        List<Weapon> tempWeapons = new List<Weapon>();
+
+        foreach (Weapon weapon in _weapons)
+        {
+            tempWeapons.Add(weapon);
+        }
+
+        return tempWeapons;
     }
 }

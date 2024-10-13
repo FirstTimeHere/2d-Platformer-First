@@ -173,10 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3ef87f4b79bed4da6d4b1ff931c367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1580674444}
+  _roulletWeapons: {fileID: 1580674456}
   _value: {fileID: 88319341}
-  _slider: {fileID: 0}
-  _sliderSpeedChange: 200
 --- !u!114 &88319341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,6 +1610,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4105362945620786469, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1580674454}
+    - targetCorrespondingSourceObject: {fileID: 4105362945620786469, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1580674456}
     - targetCorrespondingSourceObject: {fileID: 3581684743427378859, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 482496563}
@@ -1638,7 +1639,7 @@ MonoBehaviour:
     m_Bits: 64
   _defaultWeapon: {fileID: 482496563}
   _positionMask: {fileID: 2117026993}
-  <_childTransform>k__BackingField: {fileID: 1675020427}
+  <ChildTransform>k__BackingField: {fileID: 1675020427}
 --- !u!50 &1580674445
 Rigidbody2D:
   serializedVersion: 4
@@ -1754,6 +1755,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f33ae11c2721a1b448860d63e48ff7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1580674456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224999927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d532e1b7bfd925948a70eb33e2ecf0eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1600905902

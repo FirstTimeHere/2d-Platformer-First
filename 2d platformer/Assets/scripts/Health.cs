@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
     [field: SerializeField] public float Value { get; private set; }
 
     public event Action Dead;
+    public event Action ChangedHealth;
 
     public float CurrentPoint { get; private set; }
 
@@ -22,6 +23,8 @@ public class Health : MonoBehaviour
         {
             CurrentPoint = Value;
         }
+
+        ChangedHealth?.Invoke();
     }
 
     public void TakeDamage(float damage)
@@ -32,6 +35,8 @@ public class Health : MonoBehaviour
         {
             Dead?.Invoke();
         }
+
+        ChangedHealth?.Invoke();
     }
 
     private bool IsDied()
