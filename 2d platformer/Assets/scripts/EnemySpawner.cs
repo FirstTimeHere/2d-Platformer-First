@@ -49,8 +49,6 @@ public class EnemySpawner : MonoBehaviour
         int minRandomValue = 0;
         int maxRandomValue = 101;
 
-        float randomValue = Random.Range(minRandomValue, maxRandomValue);
-
-        return randomValue;
+        return Random.Range(minRandomValue, maxRandomValue);
     }
 }

@@ -29,10 +29,6 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        _weapons.Add(_defaultWeapon);
-
-        AddedWeapon?.Invoke();
-
         Collider = GetComponent<Collider2D>();
         _playerMover = GetComponent<PlayerMover>();
         _health = GetComponent<Health>();
@@ -47,6 +43,12 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         _health.Dead -= OnDead;
+    }
+
+    private void Start()
+    {
+        _weapons.Add(_defaultWeapon);
+        AddedWeapon?.Invoke();
     }
 
     private void Update()
@@ -100,6 +102,7 @@ public class Player : MonoBehaviour
 
     private void Attack()
     {
+
         if (Input.GetKeyDown(_keys.Attack))
         {
             Atacked?.Invoke();

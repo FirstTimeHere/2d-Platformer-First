@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         _mover = GetComponent<EnemyMover>();
-        _enemy = GetComponent<Enemy>();
+        _enemy = this;
         _health = GetComponent<Health>();
     }
 
@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     {
         _health.Dead -= OnDead;
     }
-   
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Player player))
@@ -63,22 +63,6 @@ public class Enemy : MonoBehaviour
                 _coroutine = null;
             }
         }
-    }
-
-    private IEnumerator GetAttackTime(float delay, bool isTimeOut)
-    {
-        var wait = new WaitForSeconds(delay);
-
-        while (isTimeOut)
-        {
-            Attacked?.Invoke();
-
-            yield return wait;
-        }
-    }
-    private void OnDead()
-    {
-        Destroy(gameObject);
     }
 
     public void SetBorders(Border border, Border secondBorder)
@@ -109,5 +93,21 @@ public class Enemy : MonoBehaviour
     public float GetHealth()
     {
         return _health.CurrentPoint;
+    }
+
+    private IEnumerator GetAttackTime(float delay, bool isTimeOut)
+    {
+        var wait = new WaitForSeconds(delay);
+
+        while (isTimeOut)
+        {
+            Attacked?.Invoke();
+
+            yield return wait;
+        }
+    }
+    private void OnDead()
+    {
+        Destroy(gameObject);
     }
 }

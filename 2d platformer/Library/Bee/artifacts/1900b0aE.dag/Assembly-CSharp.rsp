@@ -399,6 +399,7 @@
 "Assets/scripts/PlayerAnimator.cs"
 "Assets/scripts/PlayerMover.cs"
 "Assets/scripts/PlayerSpawnPoint.cs"
+"Assets/scripts/RangeVampireMask.cs"
 "Assets/scripts/RoulettWeapons.cs"
 "Assets/scripts/SliderHealthBarSmoothy.cs"
 "Assets/scripts/SpawnerWeapons.cs"
@@ -410,6 +411,7 @@
 "Assets/scripts/WeaponInfo.cs"
 "Assets/Wizard - 2D Character/Demo/SimplePlayerController.cs"
 "Assets/Wizard - 2D Character/Demo/WizDemo1.cs"
+"Assets/Wizard - 2D Character/Weapon/VampireMask/Prefab/ReloadChanger.cs"
 -langversion:9.0
 /deterministic
 /optimize+

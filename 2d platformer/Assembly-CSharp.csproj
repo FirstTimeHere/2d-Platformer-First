@@ -80,6 +80,7 @@
     <Compile Include="Assets\scripts\SpawnPointChest.cs" />
     <Compile Include="Assets\scripts\ChestAnimator.cs" />
     <Compile Include="Assets\scripts\RoulettWeapons.cs" />
+    <Compile Include="Assets\scripts\RangeVampireMask.cs" />
     <Compile Include="Assets\scripts\SpawnPoint.cs" />
     <Compile Include="Assets\scripts\FireBallAnimation.cs" />
     <Compile Include="Assets\scripts\PlayerSpawnPoint.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\scripts\EnemyMover.cs" />
     <Compile Include="Assets\scripts\Chest.cs" />
     <Compile Include="Assets\scripts\Health.cs" />
+    <Compile Include="Assets\Wizard - 2D Character\Weapon\VampireMask\Prefab\ReloadChanger.cs" />
     <Compile Include="Assets\scripts\ChestSpawner.cs" />
     <Compile Include="Assets\scripts\EnemySpawner.cs" />
     <Compile Include="Assets\scripts\Coin.cs" />

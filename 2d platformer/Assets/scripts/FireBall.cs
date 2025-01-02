@@ -9,7 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(FireBallMover))]
 public class FireBall : Ammunition
 {
-    private float _fireBallLifeTimer = 2f;
+    private float _lifeTimer = 2f;
    
     private FireBallMover _mover;
 
@@ -22,12 +22,12 @@ public class FireBall : Ammunition
 
     private void Start()
     {
-        StartCoroutine(GetLifeTimer(_fireBallLifeTimer));
+        StartCoroutine(GetLifeTimer(_lifeTimer));
     }
 
     private void Update()
     {
-        if (_fireBallLifeTimer <= 0)
+        if (_lifeTimer <= 0)
         {
             Destroy(gameObject);
         }
@@ -37,9 +37,9 @@ public class FireBall : Ammunition
     {
         var wait = new WaitForSecondsRealtime(delay);
 
-        while (_fireBallLifeTimer > 0)
+        while (_lifeTimer > 0)
         {
-            _fireBallLifeTimer--;
+            _lifeTimer--;
 
             yield return wait;
         }

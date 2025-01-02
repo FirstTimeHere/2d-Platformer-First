@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -7,22 +8,20 @@ public class VampireMask : Weapon
     [SerializeField] private float _value;
     [SerializeField] private float _direction;
     [SerializeField] private float _precentHeal;
-    [SerializeField] private float _time = 5f;
+    [SerializeField] private float _time;
 
     [SerializeField] private LayerMask _targetMask;
 
     private float _heal;
     private float _delay = 1f;
-    private float _tempTime;
-
-    private bool _isAttack;
-
-    private KeyCodes _keys = new KeyCodes();
+    private float _reloadTime;
+    private float _radius = 2.5f;
 
     private Coroutine _coroutine;
 
     private Vector2 _localScale;
     private Vector2 _rotateByScale;
+    private Vector2 _directionByVector;
 
     private Player _player;
     private VampireMask _mask;
@@ -33,12 +32,19 @@ public class VampireMask : Weapon
 
     public override float Value => _value;
 
-    public override float ReloadTime => _tempTime;
+    public override float ReloadTime => _reloadTime;
 
     public float Heal { get; private set; }
 
+    public Action GetUse;
+    public Action Reloaded;
+
     private void Awake()
     {
+        _player = FindObjectOfType<Player>();
+
+        _directionByVector=new Vector2(_direction,0);
+
         _mask = GetComponent<VampireMask>();
         _collider = GetComponent<Collider2D>();
 
@@ -49,7 +55,17 @@ public class VampireMask : Weapon
 
         _heal = _value / _precentHeal;
         Heal = _heal;
-        _tempTime = _time;
+        _reloadTime = _time;
+    }
+
+    private void OnEnable()
+    {
+        _player.Atacked += Attack;
+    }
+
+    private void OnDisable()
+    {
+        _player.Atacked -= Attack;
     }
 
     private void FixedUpdate()
@@ -59,27 +75,28 @@ public class VampireMask : Weapon
 
     private void Update()
     {
+        if (_reloadTime==0)
+        {
+            Stop();
+            _coroutine = StartCoroutine(ReturnTimerBack());
+        }
+    }
+
+    private void Attack()
+    {
         if (_player != null)
         {
-            bool isUserClicked = Input.GetKey(_keys.Attack);
-            _isAttack = isUserClicked;
-
-            if (isUserClicked)
+            if (_reloadTime > 0 || _reloadTime == _time)
             {
-                Enemy enemy;
-
-                if (IsItEnemy(_player.ChildTransform.localScale) && _tempTime > 0)
-                {
-                    _tempTime--;
-                    enemy = IsItEnemy(_player.ChildTransform.localScale);
-                    Stop();
-                    _coroutine = StartCoroutine(GetUseAblity(enemy));
-                }
+                Stop();
+                _coroutine = StartCoroutine(GetUseAblity());
+                GetUse?.Invoke();
             }
-            else if (_tempTime <= 0)
+            else if (_reloadTime <= 0)
             {
                 Stop();
                 _coroutine = StartCoroutine(ReturnTimerBack());
+                Reloaded?.Invoke();
             }
         }
     }
@@ -99,25 +116,18 @@ public class VampireMask : Weapon
 
         if (enemyHealth <= Value)
         {
-            Heal = enemyHealth/_precentHeal;
+            Heal = enemyHealth / _precentHeal;
             return Heal;
         }
 
         return _heal;
     }
 
-    private Enemy IsItEnemy(Vector3 rotationPlayer)
+    private Enemy IsItEnemy()
     {
         RaycastHit2D hit;
 
-        if (rotationPlayer.x < 0)
-        {
-            hit = Physics2D.Raycast(transform.position, -transform.right, _direction, _targetMask);
-        }
-        else
-        {
-            hit = Physics2D.Raycast(transform.position, transform.right, _direction, _targetMask);
-        }
+        hit = Physics2D.CircleCast(transform.position, _radius, _directionByVector, 0, _targetMask);
 
         if (hit)
         {
@@ -130,12 +140,21 @@ public class VampireMask : Weapon
         return null;
     }
 
-    private IEnumerator GetUseAblity(Enemy enemy)
+    private IEnumerator GetUseAblity()
     {
-        while (_isAttack && _tempTime > 0)
+        Enemy enemy;
+
+        while (_reloadTime > 0)
         {
-            enemy.TakeDamage(_mask);
-            _player.TakeVampireHeal(GetHeal(enemy));
+
+            if (IsItEnemy())
+            {
+                enemy = IsItEnemy();
+                enemy.TakeDamage(_mask);
+                _player.TakeVampireHeal(GetHeal(enemy));
+
+                _reloadTime--;
+            }
 
             yield return _wait;
         }
@@ -143,9 +162,9 @@ public class VampireMask : Weapon
 
     private IEnumerator ReturnTimerBack()
     {
-        while (_tempTime < _time)
+        while (_reloadTime < _time)
         {
-            _tempTime++;
+            _reloadTime++;
 
             yield return _wait;
         }
